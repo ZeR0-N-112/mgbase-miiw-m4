@@ -468,7 +468,21 @@ SWEP.Animations = {
             {Time = 4.3, Callback = function(self) self:EnableGrip() end},
         }
     },
-
+    ["Inspect_empty"] = {
+        Sequences = {"inspect_empty"},
+        Length = 5,
+        Fps = 30,
+        NextSequence = "Idle",
+        Events = {
+            {Time = 0, Callback = function(self) self:DoSound(Sound("mw19.mike4.inspect.1")) self:AllowRuntimeMagPoseParam(true) end},
+            {Time = 0.13, Callback = function(self) self:DisableGrip() end},
+            {Time = 1.3, Callback = function(self) self:DoSound(Sound("mw19.mike4.inspect.2")) end},
+            {Time = 2.36, Callback = function(self) self:DoSound(Sound("mw19.mike4.inspect.3")) end},
+            {Time = 3.6, Callback = function(self) self:DoSound(Sound("mw19.mike4.inspect.4")) end},
+            {Time = 4.26, Callback = function(self) self:DoSound(Sound("mw19.mike4.inspect.5")) end},
+            {Time = 4.3, Callback = function(self) self:EnableGrip() end},
+        }
+    },
     ["Jog_Out"] = {
         Sequences = {"jog_out"},
         Fps = 30,
