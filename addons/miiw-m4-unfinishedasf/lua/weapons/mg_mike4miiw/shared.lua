@@ -148,6 +148,10 @@ SWEP.ViewModelOffsets = {
         Angles = Angle(0, 0, 0),
         Pos = Vector(0, 0, 0)
     },
+	Sprint = {
+        Angles = Angle(-20, 20, 10), 
+        Pos = Vector(5, -4, -2.5) 
+    }, 
     Inspection = {
         Bone = "tag_sling",
         X = {
