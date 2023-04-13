@@ -5,11 +5,12 @@ ATTACHMENT.Icon = Material("viper/mw/attachments/icons/mike4/icon_attachment_ar_
 
 --Current mag
 ATTACHMENT.BulletList = {
-    [1] = {"j_b_017"},
-    [2] = {"j_b_016"},
-    [3] = {"j_b_015"},
-    [4] = {"j_b_014"},
+    [1] = {"j_b_016"},
+    [2] = {"j_b_015"},
+    [3] = {"j_b_014"},
+    [4] = {"j_b_013"},
 }
+
 
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 function ATTACHMENT:Stats(weapon)

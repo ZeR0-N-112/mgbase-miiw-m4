@@ -13,7 +13,7 @@ if CLIENT then
 end
 
 SWEP.Base = "mg_base"
-SWEP.GripPoseParameters = {"grip_gripvert_offset", "grip_gripvertpro_offset", "grip_barshort_gripang_offset", "grip_barshort_gripvert_offset", "grip_gripang_offset", "grip_barlong_gripvert_offset", "grip_barlong_gripang_offset", "grip_m203_offset", "grip_m203_gripvert_offset", "grip_m203_gripang_offset"}
+SWEP.GripPoseParameters = {"grip_gripvert_offset", "grip_gripvertpro_offset", "grip_barshort_gripang_offset", "grip_barshort_gripvert_offset", "grip_gripang_offset", "grip_barshort_offset", "grip_cclampsuckcock_offset", "grip_m203_offset", "grip_m203_gripvert_offset", "grip_m203_gripang_offset"}
 
 SWEP.PrintName = "M4"
 SWEP.Category = "Modern Warfare"
@@ -37,7 +37,7 @@ SWEP.Primary.ClipSize = 30
 SWEP.Primary.Automatic = true
 SWEP.Primary.BurstRounds = 1
 SWEP.Primary.BurstDelay = 0
-SWEP.Primary.RPM = 810  
+SWEP.Primary.RPM = 811  
 SWEP.CanChamberRound = true  
   
 SWEP.ParticleEffects = {

@@ -2119,9 +2119,11 @@ $sequence "inspect_empty_xmag" {
 	{ event 5004 34 "p01_ar_mike4_inspect_xmag_magout" }
 	{ event 5004 60 "p01_ar_mike4_inspect_lift" }
 	{ event 5004 71 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 73 "p01_ar_mike4_inspect_xmag_charge" }
     { event 5004 80 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 82 "p01_ar_mike4_inspect_xmag_charge" }
 	{ event 5004 89 "p01_ar_mike4_inspect_xmag_boltpull" }
-	{ event 5004 91 "p01_ar_mike4_inspect_xmag_charge" }
+	{ event 5004 91 "p01_ar_mike4_inspect_charge" }
 	{ event 5004 119 "p01_ar_mike4_inspect_xmag_maghit" }
 	{ event 5004 78 "Viewmodel.Small" }
 	{ event 5004 129 "p01_ar_mike4_inspect_xmag_magin" }
@@ -2165,9 +2167,10 @@ $sequence "inspect_empty_xmaglrg" {
 	{ event 5004 34 "p01_ar_mike4_inspect_xmag_magout" }
 	{ event 5004 60 "p01_ar_mike4_inspect_lift" }
 	{ event 5004 71 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 73 "p01_ar_mike4_inspect_xmag_charge" }
     { event 5004 80 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 82 "p01_ar_mike4_inspect_xmag_charge" }
 	{ event 5004 89 "p01_ar_mike4_inspect_xmag_boltpull" }
-	{ event 5004 91 "p01_ar_mike4_inspect_xmag_charge" }
 	{ event 5004 119 "p01_ar_mike4_inspect_xmag_maghit" }
 	{ event 5004 78 "Viewmodel.Small" }
 	{ event 5004 129 "p01_ar_mike4_inspect_xmag_magin" }

@@ -86,18 +86,22 @@ SWEP.Customization = {
 
     {"attachment_vm_ar_mike4_barrel_miiwm4", "att_vm_p01_ar_mike4_barshort_v0", "att_vm_p01_ar_mike4_barmidhvy_v0", "attachment_vm_ar_mike4_barlong_miiwm4", "attachment_vm_ar_mike4_barlight_miiwm4", "att_vm_p01_ar_mike16_barrel_v0", "att_vm_p01_ar_mike4_barhvy_v0"},
 
-    {"attachment_vm_ar_mike4_stock_miiwm4", "att_wm_p01_sm_alpha57_stock_v0", "att_vm_p01_dm_msecho_stock_v0", "att_vm_p01_ar_mike16_stock_v0", "att_wm_p01_ar_mike4_stock_mw2r"},
+    {"attachment_vm_ar_mike4_stock_miiwm4", "att_wm_p01_sm_alpha57_stock_v0", "att_vm_p01_dm_msecho_stock_v0", "att_vm_p01_ar_mike16_stock_v0", "att_wm_p01_ar_mike4_stock_mw2r", "attachment_vm_ar_mike4_stock", "attachment_vm_ar_mike4_stock_v2", "attachment_vm_ar_mike4_stock_v27", "attachment_vm_ar_mike4_stock_v15","attachment_vm_ar_mike4_customstock", "attachment_vm_ar_mike4_stockno", "att_vm_stock_heavy01", 
+    "att_vm_stock_heavy02", "att_vm_stock_light01", "att_vm_stock_medium01", "wp_330_ts", "wp_ak12", "wp_bcm_stock", "wp_ds150", "wp_emod", "wp_gl_core", "wp_m4ss", "wp_prs", "wp_sba3", "wp_ubr"},
 
-	{"att_receiver", "miiwm16"},
-	
     {"att_muzzle", "att_vm_breacher01", "att_vm_breacher02", "att_vm_compensator01", 
     "att_vm_compensator02", "att_vm_flashhider01", "att_vm_flashhider02", 
     "att_vm_flashhider03", "att_vm_flashhider04", "att_vm_muzzlebrake01",
     "att_vm_muzzlebrake02", "att_vm_muzzlebrake03",
     "att_vm_silencer01", "att_vm_silencer02", "att_vm_silencer03",
-    "att_vm_silencer04", "att_vm_silencer05", "att_vm_silencer06"},
+    "att_vm_silencer04", "att_vm_silencer05", "att_vm_silencer06",
+	"wp_atlas7",   "wp_awc762",   "wp_crs",  "wp_jcomp_g2",
+    "wp_k556",     "wp_qdc",      "wp_red",  "wp_sio",
+    "wp_ss338",    "wp_wave",     "wp_ttfx",  "wp_ttfx_1",
+    "wp_ab",       "wp_ad9",      "wp_cs",    "wp_dg33",
+	"wp_g4",       "wp_lwc",      "wp_pg3"},
 
-    {"att_sight", "att_vm_ar_mike16_carryhandle", "att_vm_minireddot01_tall", "att_vm_minireddot02_tall", "att_vm_minireddot03_tall",
+    {"att_sight", "att_vm_minireddot01_tall", "att_vm_minireddot02_tall", "att_vm_minireddot03_tall",
     "att_vm_holo_west01", "att_vm_holo_west02", "att_vm_holo_east01", "att_vm_reflex_east01",
     "att_vm_reflex_east02_tall", "att_vm_reflex_west02_tall", "att_vm_reflex_west03",
     "att_vm_thermal_east01", "att_vm_thermal_west01", "att_vm_thermal_east01_hybrid",
@@ -115,7 +119,9 @@ SWEP.Customization = {
     "wp_sf2",       "wp_x5",       "wp_lco",
     "wp_uh1",       "wp_x8",       "wp_mro_8", "wp_acog_rm45"},
 
-    {"att_laser", "attachment_vm_ar_mike4_laser01", "attachment_vm_ar_mike4_laser02", "attachment_vm_ar_mike4_laser03"},
+    {"att_laser", "attachment_vm_ar_mike4_laser01", "attachment_vm_ar_mike4_laser02", "attachment_vm_ar_mike4_laser03",
+	"wp_ngal",   "wp_peq",   "wp_wrxe",
+	"wp_dbala3", "wp_ls321", "wp_mawl"},
     
 	{"attachment_vm_ar_mwiimike4_mags", "attachment_vm_ar_mike4_mag", "attachment_vm_ar_mike4_mag_v15", "attachment_vm_ar_mike4_mag_v27", "attachment_vm_ar_mike4_xmags_edited", "attachment_vm_ar_mike4_xmags2_edited", "attachment_vm_ar_mike4_mag_v5"},
     
