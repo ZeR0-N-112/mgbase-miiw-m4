@@ -83,6 +83,8 @@ end
 
 SWEP.Customization = {
     {"att_perk", "attachment_vm_ar_mike4_perk_soh", "att_perk_fmj", "att_perk_ricochet", "att_perk_headshot"}, 
+	
+	{"att_receiver", "miiwm16"},
 
     {"attachment_vm_ar_mike4_barrel_miiwm4", "att_vm_p01_ar_mike4_barhvyshort_v0", "att_vm_p01_ar_mike4_barshort_v0", "att_vm_p01_ar_mike4_barmidhvy_v0", "attachment_vm_ar_mike4_barlong_miiwm4", "attachment_vm_ar_mike4_barlight_miiwm4", "att_vm_p01_ar_mike16_barrel_v0", "att_vm_p01_ar_mike4_barhvy_v0"},
 
@@ -101,7 +103,7 @@ SWEP.Customization = {
     "wp_ab",       "wp_ad9",      "wp_cs",    "wp_dg33",
 	"wp_g4",       "wp_lwc",      "wp_pg3"},
 
-    {"att_sight", "att_vm_minireddot01_tall", "att_vm_minireddot02_tall", "att_vm_minireddot03_tall",
+    {"att_sight", "att_vm_ar_mike16_carryhandle", "att_vm_minireddot01_tall", "att_vm_minireddot02_tall", "att_vm_minireddot03_tall",
     "att_vm_holo_west01", "att_vm_holo_west02", "att_vm_holo_east01", "att_vm_reflex_east01",
     "att_vm_reflex_east02_tall", "att_vm_reflex_west02_tall", "att_vm_reflex_west03",
     "att_vm_thermal_east01", "att_vm_thermal_west01", "att_vm_thermal_east01_hybrid",

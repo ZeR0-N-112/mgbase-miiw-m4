@@ -2,15 +2,15 @@
 //https://developer.valvesoftware.com/wiki/$phong
 "VertexLitGeneric"
 {
-    "$basetexture" "viper/mw/weapons/mike4\xmaterial_61fcabf233ce9772_rgb"
+    "$basetexture" "viper/mw/weapons/mike4\xmaterial_61fcabf233ce9772_trans"
     "$bumpmap" "viper/mw/weapons/mike4\xmaterial_61fcabf233ce9772_n"
     "$phongexponenttexture" "viper/mw/weapons/mike4\xmaterial_61fcabf233ce9772_e"
 
     "$translucent" "0"
-    "$color2" "[0 0 0]"
-    "$blendtintbybasealpha" "1"
+    //"$color2" "[0 0 0]"
+    "$blendtintbybasealpha" "0"
     "$phong" "1"
-    "$phongboost" "1"
+    "$phongboost" "0.4"
     "$phongalbedotint" "0"              //enable for brushed metals
     "$phongfresnelranges" "[1 0.5 0]"
 
@@ -33,7 +33,7 @@
         {
             "specularity" "0.5"             //0.25, 0.5, 0.75, 1
             "min" "0"
-            "max" "1"                       //change this if too bright in game
+            "max" "0.3"                       //change this if too bright in game
         }
     }
 }
