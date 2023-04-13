@@ -1,6 +1,6 @@
 ATTACHMENT.Base = "att_magazine"
 ATTACHMENT.Name = "50 Round Mags"
-ATTACHMENT.Model = Model("models/viper/mw/attachments/mike4/attachment_vm_ar_mike4_xmags.mdl")
+ATTACHMENT.Model = Model("models/kyoh/eidn/att_vm_p01_ar_mike4_xmag_v0_lod0.mdl")
 ATTACHMENT.Icon = Material("viper/mw/attachments/icons/mike4/icon_attachment_ar_mike4_xmags.vmt")
 
 --Current mag

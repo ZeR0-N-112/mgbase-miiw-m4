@@ -16,7 +16,7 @@ $bodygroup "grip"
 $bodygroup "tag_sight"
 {
 	studio "mike4_sights_rear.smd"
-	blank     //need flipped sight
+	studio "mike4_sights_rear_off.smd"    
 	blank
 }
 
@@ -165,22 +165,22 @@ $definebone "tag_sling" "" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "j_gun" "" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "j_ejectioncover" "tag_sling" 5.69 -0.785 -0.379 0 0 118.217638 0 0 0 0 0 0
 $definebone "j_trigger" "tag_sling" 3.096 0 -1.996 0 0 0 0 0 0 0 0 0
-$definebone "tag_acog_ads" "tag_sling" 3.041 0 1.202 0 0 0 -2 0 0 0 0 0
+$definebone "tag_acog_ads" "tag_sling" 3.041 0 1.202 0 0 0 -1 0 0 0 0 0
 $definebone "tag_align_gun" "tag_sling" 2.026 0 2.576 0 0 0 0 0 0 0 0 0
 $definebone "tag_barrel_attach" "tag_sling" 7.854 0 -0.042 0 0 0 0 0 0 0 0 0
 $definebone "tag_brass" "tag_sling" 5.69 -0.365 0.068 -19.997889 -89.999982 0 0 0 0 0 0 0
-$definebone "tag_holo" "tag_sling" 3.041 0 1.202 0 0 0 -2 0 0 0 0 0
-$definebone "tag_hybrid" "tag_sling" 3.72 0 1.202 0 0 0 -2 0 0 0 0 0
+$definebone "tag_holo" "tag_sling" 3.041 0 1.202 0 0 0 -1 0 0 0 0 0
+$definebone "tag_hybrid" "tag_sling" 3.72 0 1.202 0 0 0 -1 0 0 0 0 0
 $definebone "tag_ik_loc_ri" "tag_sling" -1.524 -1.859 -4.367 -0.854452 11.922965 -99.139117 0 0 0 0 0 0
 $definebone "tag_mag_attach" "tag_sling" 7.284 0 -2.195 0 0 0 0 0 0 0 0 0
 $definebone "tag_mag_show2" "tag_sling" 4.587 -0.785 0.022 0 0 0 0 0 0 0 0 0
-$definebone "tag_reflex" "tag_sling" 3.436 0 1.202 0 0 0 -2 0 0 0 0 0
-$definebone "tag_scope" "tag_sling" 3.041 0 1.202 0 0 0 -2 0 0 0 0 0
+$definebone "tag_reflex" "tag_sling" 3.436 0 1.202 0 0 0 -1 0 0 0 0 0
+$definebone "tag_scope" "tag_sling" 3.041 0 1.202 0 0 0 -1 0 0 0 0 0
 $definebone "tag_sight_off" "tag_sling" 5.136 0 1.534 0 0 0 0 0 0 0 0 0
 $definebone "tag_sight_on" "tag_sling" 4.657 0 1.545 0 0 0 0 0 0 0 0 0
 $definebone "tag_stock_attach" "tag_sling" -0.403 0 -0.011 0 0 0 0 0 0 0 0 0
 $definebone "tag_stock_hide" "tag_sling" -0.598 0 -0.011 0 0 0 0 0 0 0 0 0
-$definebone "tag_thermal" "tag_sling" 3.041 0 1.202 0 0 0 -2 0 0 0 0 0
+$definebone "tag_thermal" "tag_sling" 3.041 0 1.202 0 0 0 -1 0 0 0 0 0
 $definebone "j_charginghandle" "tag_sling" 1.781 0 0.873 0 0 0 0 0 0 0 0 0
 $definebone "j_charginghandleassist" "tag_sling" 0.384 0.715 0.801 0 0 0 0 0 0 0 0 0
 $definebone "j_firesel" "tag_sling" 1.795 0.533 -1.55 0 0 0 0 0 0 0 0 0
@@ -527,11 +527,12 @@ $poseparameter "grip_gripvertpro_offset" 0 1 loop 0
 $poseparameter "grip_barshort_gripang_offset" 0 1 loop 0
 $poseparameter "grip_barshort_gripvert_offset" 0 1 loop 0
 $poseparameter "grip_gripang_offset" 0 1 loop 0
-$poseparameter "grip_barlong_gripvert_offset" 0 1 loop 0
-$poseparameter "grip_barlong_gripang_offset" 0 1 loop 0
-$poseparameter "grip_m203_offset" 0 1 loop 0
-$poseparameter "grip_m203_gripvert_offset" 0 1 loop 0
-$poseparameter "grip_m203_gripang_offset" 0 1 loop 0
+$poseparameter "grip_cclampsuckcock_offset" 0 1 loop 0
+$poseparameter "goodluckrecompilethis" 0 1 loop 0
+$poseparameter "yeahyoushouldnotdecompilethis" 0 1 loop 0
+$poseparameter "grip_barshort_offset" 0 1 loop 0
+$poseparameter "whyyoudecompilethis" 0 1 loop 0
+$poseparameter "literallywhy" 0 1 loop 0
 $poseparameter "hybrid_offset" 0 1 loop 0
 
 $ikchain "rhand" "j_wrist_ri" knee 0.707 0.707 0
@@ -606,37 +607,43 @@ $animation "@a_jumpdelta_corrective_animation" "v_mike4_anims\@a_jumpdelta_corre
 $animation "a_empty_idle_to_sub_corrective_animation" "v_mike4_anims\a_empty_idle_to_sub_corrective_animation.smd" {
 }
 
-$animation "a_delta_empty_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_empty_additive_for_offset_corrective_animation.smd" {
+$animation "a_delta_empty_additive_for_offset_corrective_animation" "anims\empty_additive_corrective.smd" {
 }
 
 $animation "a_grip_gripvert_idle_to_sub_corrective_animation" "v_mike4_anims\a_grip_gripvert_idle_to_sub_corrective_animation.smd" {
 }
 
-$animation "a_delta_grip_gripvert_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_gripvert_additive_for_offset_corrective_animation.smd" {
+$animation "a_delta_grip_gripvert_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_vert_additive_for_offset_corrective_animation.smd" {
 }
 
-$animation "a_grip_gripvertpro_idle_to_sub_corrective_animation" "v_mike4_anims\a_grip_gripvertpro_idle_to_sub_corrective_animation.smd" {
+$animation "a_grip_gripvertpro_idle_to_sub_corrective_animation" "anims\a_grip_vert_idle_to_sub_corrective_animation.smd" {
 }
 
-$animation "a_delta_grip_gripvertpro_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_gripvertpro_additive_for_offset_corrective_animation.smd" {
+$animation "a_delta_grip_gripvertpro_additive_for_offset_corrective_animation" "anims\a_delta_grip_vert_additive_for_offset_corrective_animation.smd" {
 }
 
-$animation "a_grip_barshort_gripang_idle_to_sub_corrective_animation" "v_mike4_anims\a_grip_barshort_gripang_idle_to_sub_corrective_animation.smd" {
+$animation "a_grip_barshort_gripang_idle_to_sub_corrective_animation" "anims\a_grip_ang_barshort_idle_to_sub_corrective_animation.smd" {
 }
 
-$animation "a_delta_grip_barshort_gripang_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_barshort_gripang_additive_for_offset_corrective_animation.smd" {
+$animation "a_delta_grip_barshort_gripang_additive_for_offset_corrective_animation" "anims\a_delta_grip_ang_barshort_additive_for_offset_corrective_animation.smd" {
 }
 
-$animation "a_grip_barshort_gripvert_idle_to_sub_corrective_animation" "v_mike4_anims\a_grip_barshort_gripvert_idle_to_sub_corrective_animation.smd" {
+$animation "a_grip_barshort_gripvert_idle_to_sub_corrective_animation" "anims\a_grip_vertpro_barshort_idle_to_sub_corrective_animation.smd" {
 }
 
-$animation "a_delta_grip_barshort_gripvert_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_barshort_gripvert_additive_for_offset_corrective_animation.smd" {
+$animation "a_delta_grip_barshort_gripvert_additive_for_offset_corrective_animation" "anims\a_delta_grip_vertpro_barshort_additive_for_offset_corrective_animation.smd" {
 }
 
 $animation "a_grip_gripang_idle_to_sub_corrective_animation" "v_mike4_anims\a_grip_gripang_idle_to_sub_corrective_animation.smd" {
 }
 
-$animation "a_delta_grip_gripang_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_gripang_additive_for_offset_corrective_animation.smd" {
+$animation "a_delta_grip_gripang_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_ang_additive_for_offset_corrective_animation.smd" {
+}
+
+$animation "a_grip_cclampsuckcock_idle_to_sub_corrective_animation" "anims\a_grip_killtheclamp_idle_to_sub_corrective_animation.smd" {
+}
+
+$animation "a_delta_grip_cclampsuckcock_additive_for_offset_corrective_animation" "anims\a_delta_grip_killtheclamp_additive_for_offset_corrective_animation.smd" {
 }
 
 $animation "a_grip_barlong_gripvert_idle_to_sub_corrective_animation" "v_mike4_anims\a_grip_barlong_gripvert_idle_to_sub_corrective_animation.smd" {
@@ -651,10 +658,10 @@ $animation "a_grip_barlong_gripang_idle_to_sub_corrective_animation" "v_mike4_an
 $animation "a_delta_grip_barlong_gripang_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_barlong_gripang_additive_for_offset_corrective_animation.smd" {
 }
 
-$animation "a_grip_m203_idle_to_sub_corrective_animation" "v_mike4_anims\a_grip_m203_idle_to_sub_corrective_animation.smd" {
+$animation "a_grip_barshort_idle_to_sub_corrective_animation" "anims\a_grip_barshort_idle_to_sub_corrective_animation.smd" {
 }
 
-$animation "a_delta_grip_m203_additive_for_offset_corrective_animation" "v_mike4_anims\a_delta_grip_m203_additive_for_offset_corrective_animation.smd" {
+$animation "a_delta_grip_barshort_additive_for_offset_corrective_animation" "anims\a_delta_grip_barshort_additive_for_offset_corrective_animation.smd" {
 }
 
 $animation "a_grip_m203_gripvert_idle_to_sub_corrective_animation" "v_mike4_anims\a_grip_m203_gripvert_idle_to_sub_corrective_animation.smd" {
@@ -918,7 +925,7 @@ $animation "a_empty_idle_to_sub" "v_mike4_anims\a_empty_idle_to_sub.smd" {
 	subtract "a_empty_idle_to_sub_corrective_animation" 0
 }
 
-$animation "a_delta_empty_additive_for_offset" "v_mike4_anims\a_delta_empty_additive_for_offset.smd" {
+$animation "a_delta_empty_additive_for_offset" "anims\empty_additive.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_delta_empty_additive_for_offset_corrective_animation" 0
@@ -936,7 +943,7 @@ $animation "a_grip_gripvert_idle_to_sub" "v_mike4_anims\a_grip_gripvert_idle_to_
 	subtract "a_grip_gripvert_idle_to_sub_corrective_animation" 0
 }
 
-$animation "a_delta_grip_gripvert_additive_for_offset" "v_mike4_anims\a_delta_grip_gripvert_additive_for_offset.smd" {
+$animation "a_delta_grip_gripvert_additive_for_offset" "v_mike4_anims\a_delta_grip_vert_additive_for_offset.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_delta_grip_gripvert_additive_for_offset_corrective_animation" 0
@@ -948,13 +955,13 @@ $animation "grip_gripvertpro_idle_to_sub" "v_mike4_anims\grip_gripvertpro_idle_t
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 }
 
-$animation "a_grip_gripvertpro_idle_to_sub" "v_mike4_anims\a_grip_gripvertpro_idle_to_sub.smd" {
+$animation "a_grip_gripvertpro_idle_to_sub" "anims\a_grip_vert_idle_to_sub.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_grip_gripvertpro_idle_to_sub_corrective_animation" 0
 }
 
-$animation "a_delta_grip_gripvertpro_additive_for_offset" "v_mike4_anims\a_delta_grip_gripvertpro_additive_for_offset.smd" {
+$animation "a_delta_grip_gripvertpro_additive_for_offset" "anims\a_delta_grip_vert_additive_for_offset.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_delta_grip_gripvertpro_additive_for_offset_corrective_animation" 0
@@ -966,13 +973,13 @@ $animation "grip_barshort_gripang_idle_to_sub" "v_mike4_anims\grip_barshort_grip
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 }
 
-$animation "a_grip_barshort_gripang_idle_to_sub" "v_mike4_anims\a_grip_barshort_gripang_idle_to_sub.smd" {
+$animation "a_grip_barshort_gripang_idle_to_sub" "anims\a_grip_ang_barshort_idle_to_sub.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_grip_barshort_gripang_idle_to_sub_corrective_animation" 0
 }
 
-$animation "a_delta_grip_barshort_gripang_additive_for_offset" "v_mike4_anims\a_delta_grip_barshort_gripang_additive_for_offset.smd" {
+$animation "a_delta_grip_barshort_gripang_additive_for_offset" "anims\a_delta_grip_ang_barshort_additive_for_offset.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_delta_grip_barshort_gripang_additive_for_offset_corrective_animation" 0
@@ -984,13 +991,13 @@ $animation "grip_barshort_gripvert_idle_to_sub" "v_mike4_anims\grip_barshort_gri
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 }
 
-$animation "a_grip_barshort_gripvert_idle_to_sub" "v_mike4_anims\a_grip_barshort_gripvert_idle_to_sub.smd" {
+$animation "a_grip_barshort_gripvert_idle_to_sub" "anims\a_grip_vertpro_barshort_idle_to_sub.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_grip_barshort_gripvert_idle_to_sub_corrective_animation" 0
 }
 
-$animation "a_delta_grip_barshort_gripvert_additive_for_offset" "v_mike4_anims\a_delta_grip_barshort_gripvert_additive_for_offset.smd" {
+$animation "a_delta_grip_barshort_gripvert_additive_for_offset" "anims\a_delta_grip_vertpro_barshort_additive_for_offset.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_delta_grip_barshort_gripvert_additive_for_offset_corrective_animation" 0
@@ -1008,10 +1015,22 @@ $animation "a_grip_gripang_idle_to_sub" "v_mike4_anims\a_grip_gripang_idle_to_su
 	subtract "a_grip_gripang_idle_to_sub_corrective_animation" 0
 }
 
-$animation "a_delta_grip_gripang_additive_for_offset" "v_mike4_anims\a_delta_grip_gripang_additive_for_offset.smd" {
+$animation "a_grip_cclampsuckcock_idle_to_sub" "anims\a_grip_killtheclamp_idle_to_sub.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "a_grip_cclampsuckcock_idle_to_sub_corrective_animation" 0
+}
+
+$animation "a_delta_grip_gripang_additive_for_offset" "v_mike4_anims\a_delta_grip_ang_additive_for_offset.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "a_delta_grip_gripang_additive_for_offset_corrective_animation" 0
+}
+
+$animation "a_delta_grip_cclampsuckcock_additive_for_offset" "anims\a_delta_grip_killtheclamp_additive_for_offset.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "a_delta_grip_cclampsuckcock_additive_for_offset_corrective_animation" 0
 }
 
 $animation "grip_barlong_gripvert_idle_to_sub" "v_mike4_anims\grip_barlong_gripvert_idle_to_sub.smd" {
@@ -1056,16 +1075,16 @@ $animation "grip_m203_idle_to_sub" "v_mike4_anims\grip_m203_idle_to_sub.smd" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 }
 
-$animation "a_grip_m203_idle_to_sub" "v_mike4_anims\a_grip_m203_idle_to_sub.smd" {
+$animation "a_grip_barshort_idle_to_sub" "anims\a_grip_barshort_idle_to_sub.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "a_grip_m203_idle_to_sub_corrective_animation" 0
+	subtract "a_grip_barshort_idle_to_sub_corrective_animation" 0
 }
 
-$animation "a_delta_grip_m203_additive_for_offset" "v_mike4_anims\a_delta_grip_m203_additive_for_offset.smd" {
+$animation "a_delta_grip_barshort_additive_for_offset" "anims\a_delta_grip_barshort_additive_for_offset.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "a_delta_grip_m203_additive_for_offset_corrective_animation" 0
+	subtract "a_delta_grip_barshort_additive_for_offset_corrective_animation" 0
 }
 
 $animation "grip_m203_gripvert_idle_to_sub" "v_mike4_anims\grip_m203_gripvert_idle_to_sub.smd" {
@@ -1142,16 +1161,17 @@ $sequence "idle" {
 	addlayer "freefall_loop"
 	addlayer "aim_offset"
 	addlayer "firemode_offset"
+	addlayer "grip_cclampsuckcock_offset"
 	addlayer "empty_offset"
 	addlayer "grip_barshort_gripang_offset"
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	addlayer "a_idle_active"
@@ -1163,7 +1183,7 @@ $sequence "idle" {
 $sequence "holster" {
 	"anims\holster.smd"
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_drop_plr" }
+	{ event 5004 0 "p01_ar_mike4_drop" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1173,17 +1193,18 @@ $sequence "holster" {
 	addlayer "sprint_offset"
 	addlayer "freefall_loop"
 	addlayer "aim_offset"
+	addlayer "grip_cclampsuckcock_offset"
 	addlayer "firemode_offset"
 	addlayer "empty_offset"
 	addlayer "grip_barshort_gripang_offset"
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	snap
@@ -1194,7 +1215,7 @@ $sequence "holster" {
 
 $sequence "draw" {
 	"anims\draw.smd"
-	{ event 5004 0 "weap_mike4_raise_plr" }
+	{ event 5004 0 "p01_ar_mike4_raise" }
 	{ event 9011 8 "1" }
 	{ event 5004 16 "Viewmodel.Small" }
 	fadein 0.2
@@ -1212,11 +1233,12 @@ $sequence "draw" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	snap
@@ -1228,7 +1250,7 @@ $sequence "draw" {
 $sequence "semi_on" {
 	"anims\selectsemi_off.smd"
 	{ event 9021 0 "0" }
-	{ event 5004 1 "weap_ar_mike4_selector_on" }
+	{ event 5004 1 "p01_ar_ar_mike4_selector_on" }
 	{ event 5004 9 "Viewmodel.Small" }
 	{ event 9021 15 "1" }
 	fadein 0.2
@@ -1246,11 +1268,12 @@ $sequence "semi_on" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	snap
@@ -1262,7 +1285,7 @@ $sequence "semi_on" {
 $sequence "semi_off" {
 	"anims\selectsemi_on.smd"
 	{ event 9021 0 "0" }
-	{ event 5004 4 "weap_ar_mike4_selector_off" }
+	{ event 5004 4 "p01_ar_ar_mike4_selector_off" }
 	{ event 5004 10 "Viewmodel.Small" }
 	{ event 9021 14 "1" }
 	fadein 0.2
@@ -1280,11 +1303,12 @@ $sequence "semi_off" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	snap
@@ -1295,14 +1319,14 @@ $sequence "semi_off" {
 
 $sequence "draw_first" {
 	"anims\draw_first.smd"
-	{ event 5004 1 "weap_mike4_raise_first_01" }
+	{ event 5004 1 "p01_ar_mike4_inspect_lift" }
 	{ event 5004 12 "Viewmodel.Small" }
 	{ event 5004 21 "Viewmodel.Small" }
 	{ event 5004 27 "Viewmodel.Large" }
-	{ event 5004 27 "weap_mike4_raise_first_02" }
+	{ event 5004 9 "p01_ar_mike4_inspect_boltpull" }
 	{ event 9021 34 "1" }
-	{ event 5004 39 "weap_mike4_raise_first_03" }
-	{ event 9011 39 "1" }
+	{ event 5004 39 "p01_ar_mike4_reload_end" }
+	{ event 9011 35 "1" }
 	{ event 5004 43 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1319,11 +1343,12 @@ $sequence "draw_first" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	snap
@@ -1338,19 +1363,19 @@ $sequence "reload_empty" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_empty_lift_plr" }
+	{ event 5004 0 "p01_ar_mike4_reload_empty_lift" }
 	{ event 5004 7 "MW_MagazineDrop.AR.Poly -10,10,40" }
 	{ event 5004 8 "Viewmodel.Medium" }
-	{ event 5004 8 "weap_mike4_reload_empty_magout_plr" }
+	{ event 5004 8 "p01_ar_mike4_reload_empty_magout" }
 	{ event 9031 24 "ResetBullets" }
-	{ event 5004 31 "weap_mike4_reload_empty_magin_plr" }
+	{ event 5004 31 "p01_ar_mike4_reload_empty_maghit" }
 	{ event 5004 35 "Viewmodel.Small" }
-	{ event 5004 40 "weap_mike4_reload_empty_magin_plr_02" }
+	{ event 5004 40 "p01_ar_mike4_reload_empty_magin" }
 	{ event 5004 40 "Viewmodel.Medium" }
-	{ event 5004 53 "weap_mike4_reload_empty_chamber_plr" }
+	{ event 5004 53 "p01_ar_mike4_reload_empty_charge" }
 	{ event 5004 54 "Viewmodel.Large" }
 	{ event 9011 61 "1" }
-	{ event 5004 64 "weap_mike4_reload_empty_end_plr" }
+	{ event 5004 64 "p01_ar_mike4_reload_empty_end" }
 	{ event 5004 69 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1366,11 +1391,12 @@ $sequence "reload_empty" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1384,18 +1410,19 @@ $sequence "reload_empty_xmaglrg_fast" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_empty_fast_lift_plr" }
+	{ event 5004 0 "p01_ar_mike4_reload_empty_fast_lift" }
 	{ event 5004 7 "Viewmodel.Small" }
-	{ event 5004 7 "wfoly_ar_mike4_reload_empty_xmag_out" }
-	{ event 5004 7 "MW_MagazineDrop.AR.Poly -10,10,40" }
+	{ event 5004 8 "p01_ar_mike4_reload_xmaglrg_magout" }
+	{ event 5004 13 "MW_MagazineDrop.AR.Poly -10,10,40" }
 	{ event 9031 19 "ResetBullets" }
 	{ event 5004 24 "Viewmodel.Small" }
-	{ event 5004 25 "wfoly_ar_mike4_reload_empty_xmag_in" }
+	{ event 5004 34 "p01_ar_mike4_reload_xmaglrg_maghit" }
+	{ event 5004 40 "p01_ar_mike4_reload_xmaglrg_magin" }
 	{ event 5004 27 "Viewmodel.Medium" }
-	{ event 5004 33 "weap_mike4_reload_empty_fast_chamber_plr" }
+	{ event 5004 52 "p01_ar_mike4_reload_empty_xmaglrg_charge" }
 	{ event 5004 36 "Viewmodel.Small" }
-	{ event 9011 42 "1" }
-	{ event 5004 47 "weap_mike4_reload_empty_fast_end_plr" }
+	{ event 9011 62 "1" }
+	{ event 5004 62 "p01_ar_mike4_reload_xmaglrg_end" }
 	{ event 5004 48 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1407,15 +1434,16 @@ $sequence "reload_empty_xmaglrg_fast" {
 	addlayer "freefall_loop"
 	addlayer "aim_offset"
 	addlayer "firemode_offset"
+	addlayer "grip_cclampsuckcock_offset"
 	addlayer "grip_barshort_gripang_offset"
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1428,20 +1456,20 @@ $sequence "reload_empty_xmaglrg" {
 	"anims\reload_empty_xmaglrg_ads.smd"
 	blend "aim_offset" 0 1
 	blendwidth 2
-	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_empty_lift_plr" }
-	{ event 5004 7 "MW_MagazineDrop.AR.Poly -10,10,40" }
+	{ event 9011 13 "0" }
+	{ event 5004 0 "p01_ar_mike4_reload_empty_xmaglrg_shake" }
+	{ event 5004 30 "MW_MagazineDrop.AR.Poly -10,10,40" }
 	{ event 5004 8 "Viewmodel.Medium" }
-	{ event 5004 8 "wfoly_ar_mike4_reload_empty_xmag_out" }
+	{ event 5004 25 "p01_ar_mike4_reload_xmaglrg_magout" }
 	{ event 9031 24 "ResetBullets" }
-	{ event 5004 31 "weap_mike4_reload_empty_magin_plr" }
+	{ event 5004 54 "p01_ar_mike4_reload_xmaglrg_maghit" }
 	{ event 5004 35 "Viewmodel.Small" }
-	{ event 5004 39 "wfoly_ar_mike4_reload_empty_xmag_in" }
+	{ event 5004 56 "p01_ar_mike4_reload_xmaglrg_magin" }
 	{ event 5004 40 "Viewmodel.Medium" }
-	{ event 5004 53 "weap_mike4_reload_empty_chamber_plr" }
+	{ event 5004 70 "p01_ar_mike4_reload_empty_xmaglrg_charge" }
 	{ event 5004 54 "Viewmodel.Large" }
-	{ event 9011 61 "1" }
-	{ event 5004 64 "weap_mike4_reload_empty_end_plr" }
+	{ event 9011 78 "1" }
+	{ event 5004 79 "p01_ar_mike4_reload_xmaglrg_end" }
 	{ event 5004 69 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1453,15 +1481,16 @@ $sequence "reload_empty_xmaglrg" {
 	addlayer "freefall_loop"
 	addlayer "aim_offset"
 	addlayer "firemode_offset"
+	addlayer "grip_cclampsuckcock_offset"
 	addlayer "grip_barshort_gripang_offset"
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1475,18 +1504,18 @@ $sequence "reload_empty_fast" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_empty_fast_lift_plr" }
+	{ event 5004 0 "p01_ar_mike4_reload_empty_fast_lift" }
 	{ event 5004 7 "Viewmodel.Small" }
 	{ event 5004 7 "MW_MagazineDrop.AR.Poly -10,10,40" }
-	{ event 5004 7 "weap_mike4_reload_empty_fast_magout_plr" }
+	{ event 5004 7 "p01_ar_mike4_reload_empty_fast_magout" }
 	{ event 9031 19 "ResetBullets" }
 	{ event 5004 24 "Viewmodel.Small" }
-	{ event 5004 25 "weap_mike4_reload_empty_fast_magin_plr" }
+	{ event 5004 25 "p01_ar_mike4_reload_empty_fast_magin" }
 	{ event 5004 27 "Viewmodel.Medium" }
-	{ event 5004 33 "weap_mike4_reload_empty_fast_chamber_plr" }
+	{ event 5004 33 "p01_ar_mike4_reload_empty_fast_charge" }
 	{ event 5004 36 "Viewmodel.Small" }
 	{ event 9011 42 "1" }
-	{ event 5004 47 "weap_mike4_reload_empty_fast_end_plr" }
+	{ event 5004 47 "p01_ar_mike4_reload_empty_fast_end" }
 	{ event 5004 48 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1502,11 +1531,12 @@ $sequence "reload_empty_fast" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1520,19 +1550,19 @@ $sequence "reload_empty_xmag" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_empty_lift_plr" }
-	{ event 5004 7 "MW_MagazineDrop.AR.Poly -10,10,40" }
+	{ event 5004 0 "p01_ar_mike4_reload_empty_lift" }
+	{ event 5004 13 "MW_MagazineDrop.AR.Poly -10,10,40" }
 	{ event 5004 8 "Viewmodel.Medium" }
-	{ event 5004 8 "wfoly_ar_mike4_reload_empty_xmag_out" }
+	{ event 5004 10 "p01_ar_mike4_reload_xmag_magout" }
 	{ event 9031 24 "ResetBullets" }
-	{ event 5004 31 "weap_mike4_reload_empty_magin_plr" }
+	{ event 5004 46 "p01_ar_mike4_reload_xmag_maghit" }
 	{ event 5004 35 "Viewmodel.Small" }
-	{ event 5004 39 "wfoly_ar_mike4_reload_empty_xmag_in" }
+	{ event 5004 48 "p01_ar_mike4_reload_xmag_magin" }
 	{ event 5004 40 "Viewmodel.Medium" }
-	{ event 5004 53 "weap_mike4_reload_empty_chamber_plr" }
+	{ event 5004 61 "p01_ar_mike4_reload_empty_xmag_charge" }
 	{ event 5004 54 "Viewmodel.Large" }
-	{ event 9011 61 "1" }
-	{ event 5004 64 "weap_mike4_reload_empty_end_plr" }
+	{ event 9011 69 "1" }
+	{ event 5004 70 "p01_ar_mike4_reload_xmag_end" }
 	{ event 5004 69 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1548,11 +1578,12 @@ $sequence "reload_empty_xmag" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1566,18 +1597,19 @@ $sequence "reload_empty_xmag_fast" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_empty_fast_lift_plr" }
+	{ event 5004 0 "p01_ar_mike4_reload_empty_fast_lift" }
 	{ event 5004 7 "Viewmodel.Small" }
-	{ event 5004 7 "wfoly_ar_mike4_reload_empty_xmag_out" }
-	{ event 5004 7 "MW_MagazineDrop.AR.Poly -10,10,40" }
+	{ event 5004 10 "p01_ar_mike4_reload_xmag_magout" }
+	{ event 5004 13 "MW_MagazineDrop.AR.Poly -10,10,40" }
 	{ event 9031 19 "ResetBullets" }
 	{ event 5004 24 "Viewmodel.Small" }
-	{ event 5004 25 "wfoly_ar_mike4_reload_empty_xmag_in" }
+	{ event 5004 31 "p01_ar_mike4_reload_xmag_maghit" }
+	{ event 5004 33 "p01_ar_mike4_reload_xmag_magin" }
 	{ event 5004 27 "Viewmodel.Medium" }
-	{ event 5004 33 "weap_mike4_reload_empty_fast_chamber_plr" }
+	{ event 5004 45 "p01_ar_mike4_reload_empty_xmag_charge" }
 	{ event 5004 36 "Viewmodel.Small" }
-	{ event 9011 42 "1" }
-	{ event 5004 47 "weap_mike4_reload_empty_fast_end_plr" }
+	{ event 9011 52 "1" }
+	{ event 5004 53 "p01_ar_mike4_reload_empty_fast_end" }
 	{ event 5004 48 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1593,11 +1625,12 @@ $sequence "reload_empty_xmag_fast" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1610,16 +1643,16 @@ $sequence "reload" {
 	"anims\reload_ads.smd"
 	blend "aim_offset" 0 1
 	blendwidth 2
-	{ event 5004 0 "weap_mike4_reload_lift_plr" }
+	{ event 5004 0 "p01_ar_mike4_reload_lift" }
 	{ event 9011 2 "0" }
-	{ event 5004 21 "weap_mike4_reload_magout_plr" }
+	{ event 5004 21 "p01_ar_mike4_reload_magout" }
 	{ event 5004 21 "Viewmodel.Small" }
 	{ event 5004 26 "Viewmodel.Small" }
 	{ event 5004 34 "Viewmodel.Small" }
-	{ event 5004 34 "weap_mike4_reload_magin_plr" }
+	{ event 5004 34 "p01_ar_mike4_reload_maghit" }
 	{ event 5004 39 "Viewmodel.Medium" }
-	{ event 5004 40 "weap_mike4_reload_magin_plr_02" }
-	{ event 5004 53 "weap_mike4_reload_end_plr" }
+	{ event 5004 40 "p01_ar_mike4_reload_magin" }
+	{ event 5004 53 "p01_ar_mike4_reload_end" }
 	{ event 9031 56 "ResetBullets" }
 	{ event 9011 59 "1" }
 	fadein 0.2
@@ -1636,11 +1669,12 @@ $sequence "reload" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1654,15 +1688,14 @@ $sequence "reload_fast" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_fast_lift_plr" }
+	{ event 5004 0 "p01_ar_mike4_reload_fast_lift" }
 	{ event 5004 10 "Viewmodel.Small" }
-	{ event 5004 11 "weap_mike4_reload_fast_magout_plr" }
+	{ event 5004 11 "p01_ar_mike4_reload_fast_magout" }
 	{ event 5004 11 "MW_MagazineDrop.AR.Poly -10,10,40" }
-	{ event 5004 22 "weap_mike4_reload_fast_magin_plr" }
-	{ event 5004 28 "weap_mike4_reload_fast_magin_plr_02" }
+	{ event 5004 28 "p01_ar_mike4_reload_fast_magin" }
 	{ event 5004 28 "Viewmodel.Medium" }
 	{ event 9011 35 "1" }
-	{ event 5004 36 "weap_mike4_reload_fast_end_plr" }
+	{ event 5004 36 "p01_ar_mike4_reload_fast_end" }
 	{ event 5004 39 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1678,11 +1711,12 @@ $sequence "reload_fast" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1695,18 +1729,18 @@ $sequence "reload_xmaglrg" {
 	"anims\reload_xmaglrg_ads.smd"
 	blend "aim_offset" 0 1
 	blendwidth 2
-	{ event 5004 0 "weap_mike4_reload_lift_plr" }
+	{ event 5004 0 "p01_ar_mike4_reload_xmaglrg_lift" }
 	{ event 9011 2 "0" }
-	{ event 5004 18 "wfoly_ar_mike4_reload_xmag_out" }
+	{ event 5004 29 "p01_ar_mike4_reload_xmaglrg_magout" }
 	{ event 5004 21 "Viewmodel.Small" }
 	{ event 5004 26 "Viewmodel.Small" }
-	{ event 5004 32 "weap_mike4_reload_magin_plr" }
+	{ event 5004 41 "p01_ar_mike4_reload_xmaglrg_maghit" }
 	{ event 5004 34 "Viewmodel.Small" }
-	{ event 5004 37 "wfoly_ar_mike4_reload_xmag_in" }
+	{ event 5004 51 "p01_ar_mike4_reload_xmaglrg_magin" }
 	{ event 5004 39 "Viewmodel.Medium" }
-	{ event 5004 53 "weap_mike4_reload_end_plr" }
+	{ event 5004 78 "p01_ar_mike4_reload_xmaglrg_end" }
 	{ event 9031 56 "ResetBullets" }
-	{ event 9011 60 "1" }
+	{ event 9011 77 "1" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1721,11 +1755,12 @@ $sequence "reload_xmaglrg" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1739,15 +1774,15 @@ $sequence "reload_xmaglrg_fast" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_fast_lift_plr" }
-	{ event 5004 5 "wfoly_ar_mike4_reload_xmag_out" }
+	{ event 5004 0 "p01_ar_mike4_reload_xmaglrg_lift" }
+	{ event 5004 10 "p01_ar_mike4_reload_xmaglrg_magout" }
 	{ event 5004 10 "Viewmodel.Small" }
-	{ event 5004 11 "MW_MagazineDrop.AR.Poly -10,10,40" }
-	{ event 5004 21 "weap_mike4_reload_fast_magin_plr" }
-	{ event 5004 25 "wfoly_ar_mike4_reload_xmag_in" }
+	{ event 5004 13 "MW_MagazineDrop.AR.Poly -10,10,40" }
+	{ event 5004 37 "p01_ar_mike4_reload_xmaglrg_maghit" }
+	{ event 5004 42 "p01_ar_mike4_reload_xmaglrg_magin" }
 	{ event 5004 28 "Viewmodel.Medium" }
-	{ event 9011 35 "1" }
-	{ event 5004 36 "weap_mike4_reload_fast_end_plr" }
+	{ event 9011 52 "1" }
+	{ event 5004 53 "p01_ar_mike4_reload_xmaglrg_end" }
 	{ event 5004 39 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1763,11 +1798,12 @@ $sequence "reload_xmaglrg_fast" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1780,18 +1816,18 @@ $sequence "reload_xmag" {
 	"anims\reload_xmag_ads.smd"
 	blend "aim_offset" 0 1
 	blendwidth 2
-	{ event 5004 0 "weap_mike4_reload_lift_plr" }
+	{ event 5004 0 "p01_ar_mike4_reload_xmag_lift" }
 	{ event 9011 2 "0" }
-	{ event 5004 18 "wfoly_ar_mike4_reload_xmag_out" }
+	{ event 5004 26 "p01_ar_mike4_reload_xmag_magout" }
 	{ event 5004 21 "Viewmodel.Small" }
 	{ event 5004 26 "Viewmodel.Small" }
-	{ event 5004 33 "weap_mike4_reload_magin_plr" }
+	{ event 5004 36 "p01_ar_mike4_reload_xmag_maghit" }
 	{ event 5004 34 "Viewmodel.Small" }
-	{ event 5004 34 "wfoly_ar_mike4_reload_xmag_in" }
+	{ event 5004 44 "p01_ar_mike4_reload_xmag_magin" }
 	{ event 5004 39 "Viewmodel.Medium" }
-	{ event 5004 53 "weap_mike4_reload_end_plr" }
+	{ event 5004 69 "p01_ar_mike4_reload_xmag_end" }
 	{ event 9031 56 "ResetBullets" }
-	{ event 9011 60 "1" }
+	{ event 9011 69 "1" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -1806,11 +1842,12 @@ $sequence "reload_xmag" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1824,15 +1861,15 @@ $sequence "reload_xmag_fast" {
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9011 0 "0" }
-	{ event 5004 0 "weap_mike4_reload_fast_lift_plr" }
-	{ event 5004 5 "wfoly_ar_mike4_reload_xmag_out" }
+	{ event 5004 0 "p01_ar_mike4_reload_xmag_lift" }
+	{ event 5004 9 "p01_ar_mike4_reload_xmag_magout" }
 	{ event 5004 10 "Viewmodel.Small" }
-	{ event 5004 11 "MW_MagazineDrop.AR.Poly -10,10,40" }
-	{ event 5004 21 "weap_mike4_reload_fast_magin_plr" }
-	{ event 5004 25 "wfoly_ar_mike4_reload_xmag_in" }
+	{ event 5004 13 "MW_MagazineDrop.AR.Poly -10,10,40" }
+	{ event 5004 29 "p01_ar_mike4_reload_xmag_maghit" }
+	{ event 5004 35 "p01_ar_mike4_reload_xmag_magin" }
 	{ event 5004 28 "Viewmodel.Medium" }
-	{ event 9011 35 "1" }
-	{ event 5004 36 "weap_mike4_reload_fast_end_plr" }
+	{ event 9011 43 "1" }
+	{ event 5004 44 "p01_ar_mike4_reload_xmag_end" }
 	{ event 5004 39 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1848,11 +1885,12 @@ $sequence "reload_xmag_fast" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1862,7 +1900,7 @@ $sequence "reload_xmag_fast" {
 
 $sequence "fire" {
 	"anims\fire.smd"
-	"anims\fire.smd"
+	"anims\fire_2.smd"
 	blend "aim_offset" 0 1
 	blendwidth 2
 	{ event 9001 1 "MuzzleFlash muzzle" }
@@ -1885,11 +1923,12 @@ $sequence "fire" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	snap
@@ -1900,15 +1939,19 @@ $sequence "fire" {
 
 $sequence "inspect" {
 	"anims\inspect.smd"
-	{ event 5004 1 "wfoly_ar_mike4_inspect_01" }
+	{ event 5004 1 "p01_ar_mike4_inspect_lift" }
 	{ event 9011 4 "0" }
 	{ event 5004 14 "Viewmodel.Small" }
-	{ event 5004 39 "wfoly_ar_mike4_inspect_02" }
-	{ event 5004 72 "wfoly_ar_mike4_inspect_03" }
+	{ event 5004 20 "p01_ar_mike4_inspect_magout" }
+	{ event 5004 52 "p01_ar_mike4_inspect_maghit" }
 	{ event 5004 78 "Viewmodel.Small" }
-	{ event 5004 102 "wfoly_ar_mike4_inspect_04" }
-	{ event 5004 126 "wfoly_ar_mike4_inspect_05" }
-	{ event 9011 129 "1" }
+	{ event 5004 60 "p01_ar_mike4_inspect_magin" }
+	{ event 5004 71 "p01_ar_mike4_inspect_rotate" }
+	{ event 5004 89 "p01_ar_mike4_inspect_boltpull" }
+	{ event 5004 110 "p01_ar_mike4_inspect_boltclose" }
+	{ event 5004 119 "p01_ar_mike4_inspect_hit" }
+	{ event 5004 127 "p01_ar_mike4_inspect_end" }
+	{ event 9011 132 "1" }
 	{ event 5004 138 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1924,11 +1967,12 @@ $sequence "inspect" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1937,15 +1981,19 @@ $sequence "inspect" {
 }
 $sequence "inspect_xmag" {
 	"anims\inspect_xmag.smd"
-	{ event 5004 1 "wfoly_ar_mike4_inspect_01" }
+	{ event 5004 1 "p01_ar_mike4_inspect_xmag_lift" }
 	{ event 9011 4 "0" }
 	{ event 5004 14 "Viewmodel.Small" }
-	{ event 5004 39 "wfoly_ar_mike4_inspect_02" }
-	{ event 5004 72 "wfoly_ar_mike4_inspect_03" }
+	{ event 5004 20 "p01_ar_mike4_inspect_xmag_magout" }
+	{ event 5004 52 "p01_ar_mike4_inspect_xmag_maghit" }
 	{ event 5004 78 "Viewmodel.Small" }
-	{ event 5004 102 "wfoly_ar_mike4_inspect_04" }
-	{ event 5004 126 "wfoly_ar_mike4_inspect_05" }
-	{ event 9011 129 "1" }
+	{ event 5004 60 "p01_ar_mike4_inspect_xmag_magin" }
+	{ event 5004 71 "p01_ar_mike4_inspect_xmag_rotate" }
+	{ event 5004 89 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 110 "p01_ar_mike4_inspect_xmag_charge" }
+	{ event 5004 119 "p01_ar_mike4_inspect_xmag_forwardassist" }
+	{ event 5004 127 "p01_ar_mike4_inspect_xmag_end" }
+	{ event 9011 132 "1" }
 	{ event 5004 138 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1961,11 +2009,12 @@ $sequence "inspect_xmag" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -1974,15 +2023,19 @@ $sequence "inspect_xmag" {
 }
 $sequence "inspect_xmaglrg" {
 	"anims\inspect_xmaglrg.smd"
-	{ event 5004 1 "wfoly_ar_mike4_inspect_01" }
+	{ event 5004 1 "p01_ar_mike4_inspect_xmag_lift" }
 	{ event 9011 4 "0" }
 	{ event 5004 14 "Viewmodel.Small" }
-	{ event 5004 39 "wfoly_ar_mike4_inspect_02" }
-	{ event 5004 72 "wfoly_ar_mike4_inspect_03" }
+	{ event 5004 20 "p01_ar_mike4_inspect_xmag_magout" }
+	{ event 5004 52 "p01_ar_mike4_inspect_xmag_maghit" }
 	{ event 5004 78 "Viewmodel.Small" }
-	{ event 5004 102 "wfoly_ar_mike4_inspect_04" }
-	{ event 5004 126 "wfoly_ar_mike4_inspect_05" }
-	{ event 9011 129 "1" }
+	{ event 5004 60 "p01_ar_mike4_inspect_xmag_magin" }
+	{ event 5004 71 "p01_ar_mike4_inspect_xmag_rotate" }
+	{ event 5004 89 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 110 "p01_ar_mike4_inspect_xmag_charge" }
+	{ event 5004 119 "p01_ar_mike4_inspect_xmag_forwardassist" }
+	{ event 5004 127 "p01_ar_mike4_inspect_xmag_end" }
+	{ event 9011 132 "1" }
 	{ event 5004 138 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -1998,11 +2051,12 @@ $sequence "inspect_xmaglrg" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2011,15 +2065,23 @@ $sequence "inspect_xmaglrg" {
 }
 $sequence "inspect_empty" {
 	"anims\inspect_empty.smd"
-	{ event 5004 1 "wfoly_ar_mike4_inspect_01" }
-	{ event 9011 4 "0" }
+	{ event 5004 1 "p01_ar_mike4_inspect_rotate" }
+	{ event 9011 15 "0" }
 	{ event 5004 14 "Viewmodel.Small" }
-	{ event 5004 39 "wfoly_ar_mike4_inspect_02" }
-	{ event 5004 72 "wfoly_ar_mike4_inspect_03" }
+	{ event 5004 34 "p01_ar_mike4_inspect_magout" }
+	{ event 5004 60 "p01_ar_mike4_inspect_lift" }
+	{ event 5004 71 "p01_ar_mike4_inspect_boltpull" }
+    { event 5004 80 "p01_ar_mike4_inspect_boltpull" }
+	{ event 5004 89 "p01_ar_mike4_inspect_boltpull" }
+	{ event 5004 91 "p01_ar_mike4_inspect_boltclose" }
+	{ event 5004 119 "p01_ar_mike4_inspect_maghit" }
 	{ event 5004 78 "Viewmodel.Small" }
-	{ event 5004 102 "wfoly_ar_mike4_inspect_04" }
-	{ event 5004 126 "wfoly_ar_mike4_inspect_05" }
-	{ event 9011 129 "1" }
+	{ event 5004 129 "p01_ar_mike4_inspect_magin" }
+	{ event 5004 139 "p01_ar_mike4_inspect_rotate" }
+	{ event 5004 150 "p01_ar_mike4_inspect_boltpull" }
+	{ event 5004 171 "p01_ar_mike4_inspect_boltclose" }
+	{ event 5004 187 "p01_ar_mike4_inspect_end" }
+	{ event 9011 186 "1" }
 	{ event 5004 138 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -2035,11 +2097,12 @@ $sequence "inspect_empty" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2048,15 +2111,23 @@ $sequence "inspect_empty" {
 }
 $sequence "inspect_empty_xmag" {
 	"anims\inspect_empty_xmag.smd"
-	{ event 5004 1 "wfoly_ar_mike4_inspect_01" }
-	{ event 9011 4 "0" }
+	{ event 5004 1 "p01_ar_mike4_inspect_xmag_rotate" }
+	{ event 9011 15 "0" }
 	{ event 5004 14 "Viewmodel.Small" }
-	{ event 5004 39 "wfoly_ar_mike4_inspect_02" }
-	{ event 5004 72 "wfoly_ar_mike4_inspect_03" }
+	{ event 5004 34 "p01_ar_mike4_inspect_xmag_magout" }
+	{ event 5004 60 "p01_ar_mike4_inspect_lift" }
+	{ event 5004 71 "p01_ar_mike4_inspect_xmag_boltpull" }
+    { event 5004 80 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 89 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 91 "p01_ar_mike4_inspect_xmag_charge" }
+	{ event 5004 119 "p01_ar_mike4_inspect_xmag_maghit" }
 	{ event 5004 78 "Viewmodel.Small" }
-	{ event 5004 102 "wfoly_ar_mike4_inspect_04" }
-	{ event 5004 126 "wfoly_ar_mike4_inspect_05" }
-	{ event 9011 129 "1" }
+	{ event 5004 129 "p01_ar_mike4_inspect_xmag_magin" }
+	{ event 5004 139 "p01_ar_mike4_inspect_xmag_rotate" }
+	{ event 5004 150 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 171 "p01_ar_mike4_inspect_xmag_charge" }
+	{ event 5004 187 "p01_ar_mike4_inspect_xmag_end" }
+	{ event 9011 186 "1" }
 	{ event 5004 138 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -2072,11 +2143,12 @@ $sequence "inspect_empty_xmag" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2085,15 +2157,23 @@ $sequence "inspect_empty_xmag" {
 }
 $sequence "inspect_empty_xmaglrg" {
 	"anims\inspect_empty_xmaglrg.smd"
-	{ event 5004 1 "wfoly_ar_mike4_inspect_01" }
-	{ event 9011 4 "0" }
+	{ event 5004 1 "p01_ar_mike4_inspect_xmag_rotate" }
+	{ event 9011 15 "0" }
 	{ event 5004 14 "Viewmodel.Small" }
-	{ event 5004 39 "wfoly_ar_mike4_inspect_02" }
-	{ event 5004 72 "wfoly_ar_mike4_inspect_03" }
+	{ event 5004 34 "p01_ar_mike4_inspect_xmag_magout" }
+	{ event 5004 60 "p01_ar_mike4_inspect_lift" }
+	{ event 5004 71 "p01_ar_mike4_inspect_xmag_boltpull" }
+    { event 5004 80 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 89 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 91 "p01_ar_mike4_inspect_xmag_charge" }
+	{ event 5004 119 "p01_ar_mike4_inspect_xmag_maghit" }
 	{ event 5004 78 "Viewmodel.Small" }
-	{ event 5004 102 "wfoly_ar_mike4_inspect_04" }
-	{ event 5004 126 "wfoly_ar_mike4_inspect_05" }
-	{ event 9011 129 "1" }
+	{ event 5004 129 "p01_ar_mike4_inspect_xmag_magin" }
+	{ event 5004 139 "p01_ar_mike4_inspect_xmag_rotate" }
+	{ event 5004 150 "p01_ar_mike4_inspect_xmag_boltpull" }
+	{ event 5004 171 "p01_ar_mike4_inspect_xmag_charge" }
+	{ event 5004 187 "p01_ar_mike4_inspect_xmag_end" }
+	{ event 9011 186 "1" }
 	{ event 5004 138 "Viewmodel.Small" }
 	fadein 0.2
 	fadeout 0.2
@@ -2109,11 +2189,12 @@ $sequence "inspect_empty_xmaglrg" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2144,11 +2225,12 @@ $sequence "melee_miss_01" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2180,11 +2262,12 @@ $sequence "melee_miss_02" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2216,11 +2299,12 @@ $sequence "melee_miss_03" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2252,11 +2336,12 @@ $sequence "melee_hit_01" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2288,11 +2373,12 @@ $sequence "melee_hit_02" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2324,11 +2410,12 @@ $sequence "melee_hit_03" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2337,12 +2424,11 @@ $sequence "melee_hit_03" {
 }
 
 $sequence "hybrid_toggle_on" {
-	"anims\hybrid_off.smd"
+	"anims\vm_p01_ar_mike4_hybrid01_off.smd"
 	{ event 9021 1 "0" }
 	{ event 5004 4 "Flipsight.Up" }
 	{ event 5004 16 "Viewmodel.Small" }
 	{ event 9021 22 "1" }
-	angles 90 180 180
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -2358,11 +2444,12 @@ $sequence "hybrid_toggle_on" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	snap
 	fps 30
@@ -2371,12 +2458,11 @@ $sequence "hybrid_toggle_on" {
 }
 
 $sequence "hybrid_toggle_off" {
-	"anims\hybrid_on.smd"
+	"anims\vm_p01_ar_mike4_hybrid01_on.smd"
 	{ event 9011 2 "0" }
 	{ event 5004 4 "Flipsight.Down" }
 	{ event 5004 16 "Viewmodel.Small" }
 	{ event 9011 20 "1" }
-	angles 90 180 180
 	fadein 0.2
 	fadeout 0.2
 	addlayer "jog_loop"
@@ -2392,11 +2478,12 @@ $sequence "hybrid_toggle_off" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	snap
 	fps 30
@@ -2423,11 +2510,12 @@ $sequence "ads_in" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2454,11 +2542,12 @@ $sequence "ads_out" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 30
@@ -2548,11 +2637,12 @@ $sequence "sprint_in" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 1.25
@@ -2598,11 +2688,12 @@ $sequence "sprint_out" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 1.25
@@ -2671,11 +2762,12 @@ $sequence "jump_land" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 1.363
@@ -2711,11 +2803,12 @@ $sequence "jump" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 2.727
@@ -2789,10 +2882,20 @@ $sequence "grip_gripang_offset" {
 	realtime
 }
 
-$sequence "grip_barlong_gripvert_offset" {
+$sequence "grip_cclampsuckcock_offset" {
+	"a_grip_cclampsuckcock_idle_to_sub"
+	"a_delta_grip_cclampsuckcock_additive_for_offset"
+	blend "grip_cclampsuckcock_offset" 0 1
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
+	realtime
+}
+$sequence "goodluckrecompilethis" {
 	"a_grip_barlong_gripvert_idle_to_sub"
 	"a_delta_grip_barlong_gripvert_additive_for_offset"
-	blend "grip_barlong_gripvert_offset" 0 1
+	blend "goodluckrecompilethis" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -2800,10 +2903,10 @@ $sequence "grip_barlong_gripvert_offset" {
 	realtime
 }
 
-$sequence "grip_barlong_gripang_offset" {
+$sequence "yeahyoushouldnotdecompilethis" {
 	"a_grip_barlong_gripang_idle_to_sub"
 	"a_delta_grip_barlong_gripang_additive_for_offset"
-	blend "grip_barlong_gripang_offset" 0 1
+	blend "yeahyoushouldnotdecompilethis" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -2811,10 +2914,10 @@ $sequence "grip_barlong_gripang_offset" {
 	realtime
 }
 
-$sequence "grip_m203_offset" {
-	"a_grip_m203_idle_to_sub"
-	"a_delta_grip_m203_additive_for_offset"
-	blend "grip_m203_offset" 0 1
+$sequence "grip_barshort_offset" {
+	"a_grip_barshort_idle_to_sub"
+	"a_delta_grip_barshort_additive_for_offset"
+	blend "grip_barshort_offset" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -2822,10 +2925,10 @@ $sequence "grip_m203_offset" {
 	realtime
 }
 
-$sequence "grip_m203_gripvert_offset" {
+$sequence "whyyoudecompilethis" {
 	"a_grip_m203_gripvert_idle_to_sub"
 	"a_delta_grip_m203_gripvert_additive_for_offset"
-	blend "grip_m203_gripvert_offset" 0 1
+	blend "whyyoudecompilethis" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -2833,10 +2936,10 @@ $sequence "grip_m203_gripvert_offset" {
 	realtime
 }
 
-$sequence "grip_m203_gripang_offset" {
+$sequence "literallywhy" {
 	"a_grip_m203_gripang_idle_to_sub"
 	"a_delta_grip_m203_gripang_additive_for_offset"
-	blend "grip_m203_gripang_offset" 0 1
+	blend "literallywhy" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -2882,11 +2985,12 @@ $sequence "jog_out" {
 	addlayer "grip_barshort_gripvert_offset"
 	addlayer "grip_gripang_offset"
 	addlayer "grip_gripvert_offset"
-	addlayer "grip_m203_offset"
-	addlayer "grip_m203_gripang_offset"
-	addlayer "grip_m203_gripvert_offset"
-	addlayer "grip_barlong_gripang_offset"
-	addlayer "grip_barlong_gripvert_offset"
+	addlayer "grip_barshort_offset"
+	addlayer "grip_cclampsuckcock_offset"
+	addlayer "literallywhy"
+	addlayer "whyyoudecompilethis"
+	addlayer "yeahyoushouldnotdecompilethis"
+	addlayer "goodluckrecompilethis"
 	addlayer "grip_gripvertpro_offset"
 	addlayer "hybrid_offset"
 	fps 1.304

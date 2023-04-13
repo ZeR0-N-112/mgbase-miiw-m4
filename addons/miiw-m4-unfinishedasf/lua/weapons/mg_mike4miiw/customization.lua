@@ -117,7 +117,7 @@ SWEP.Customization = {
 
     {"att_laser", "attachment_vm_ar_mike4_laser01", "attachment_vm_ar_mike4_laser02", "attachment_vm_ar_mike4_laser03"},
     
-	{"attachment_vm_ar_mike4_mag", "attachment_vm_ar_mike4_mag_v15", "attachment_vm_ar_mike4_mag_v27", "attachment_vm_ar_mike4_xmags_edited", "attachment_vm_ar_mike4_xmags2_edited", "attachment_vm_ar_mike4_mag_v5"},
+	{"attachment_vm_ar_mwiimike4_mags", "attachment_vm_ar_mike4_mag", "attachment_vm_ar_mike4_mag_v15", "attachment_vm_ar_mike4_mag_v27", "attachment_vm_ar_mike4_xmags_edited", "attachment_vm_ar_mike4_xmags2_edited", "attachment_vm_ar_mike4_mag_v5"},
     
     {"att_grip", "attachment_vm_ar_mike4_angledgrip01", "attachment_vm_ar_mike4_angledgrip02", "attachment_vm_ar_mike4_stubbygrip01", 
     "attachment_vm_ar_mike4_stubbygrip02", "attachment_vm_ar_mike4_vertgrip01", "attachment_vm_ar_mike4_vertgrip02", 
