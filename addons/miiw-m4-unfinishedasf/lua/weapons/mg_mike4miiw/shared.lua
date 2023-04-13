@@ -8,8 +8,8 @@ include("animations.lua")
 include("customization.lua")
 
 if CLIENT then
-    killicon.Add( "mg_mike4", "VGUI/entities/mg_mike4", Color(255, 0, 0, 255))
-    SWEP.WepSelectIcon = surface.GetTextureID("VGUI/spawnicons/icon_cac_weapon_ar_mike4")
+    killicon.Add( "mg_mwiimike4", "VGUI/entities/mg_mwiimike4", Color(255, 0, 0, 255))
+    SWEP.WepSelectIcon = surface.GetTextureID("VGUI/entities/mg_mwiimike4")
 end
 
 SWEP.Base = "mg_base"
@@ -31,7 +31,7 @@ SWEP.Slot = 2
 SWEP.HoldType = "Rifle"
 
 SWEP.AlternateGrips = false
-SWEP.Primary.Sound = Sound("mw19.mike4.fire")
+SWEP.Primary.Sound = Sound("mwii.mike4.fire")
 SWEP.Primary.Ammo = "Ar2"
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Automatic = true
