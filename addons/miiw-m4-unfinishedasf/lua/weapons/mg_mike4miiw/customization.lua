@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 function SWEP:doSuppressorStats()
-    self.Primary.Sound = Sound("mwii.mike4.fire.s")
+    self.Primary.Sound = Sound("mw19.mike4.fire.s")
     self.Reverb = {
         RoomScale = 50000,
         Sounds = {
@@ -84,7 +84,7 @@ end
 SWEP.Customization = {
     {"att_perk", "attachment_vm_ar_mike4_perk_soh", "att_perk_fmj", "att_perk_ricochet", "att_perk_headshot"}, 
 
-    {"attachment_vm_ar_mike4_barrel_miiwm4", "attachment_vm_ar_mike4_barlong_miiwm4", "attachment_vm_ar_mike4_barlight_miiwm4", "att_vm_p01_ar_mike16_barrel_v0", "att_vm_p01_ar_mike4_barhvy_v0"},
+    {"attachment_vm_ar_mike4_barrel_miiwm4", "att_vm_p01_ar_mike4_barshort_v0", "att_vm_p01_ar_mike4_barmidhvy_v0", "attachment_vm_ar_mike4_barlong_miiwm4", "attachment_vm_ar_mike4_barlight_miiwm4", "att_vm_p01_ar_mike16_barrel_v0", "att_vm_p01_ar_mike4_barhvy_v0"},
 
     {"attachment_vm_ar_mike4_stock_miiwm4", "att_wm_p01_sm_alpha57_stock_v0", "att_vm_p01_dm_msecho_stock_v0", "att_vm_p01_ar_mike16_stock_v0", "att_wm_p01_ar_mike4_stock_mw2r"},
 

@@ -91,13 +91,13 @@ sound.Add({
 })
 sound.Add({
     name =           "p01_ar_mike4_inspect_boltpull",
-    channel =        CHAN_WPNFOLEY +5,
+    channel =        CHAN_WPNFOLEY +6,
     volume =         1,
     sound = {"zeron/mwii/mike4/p01_ar_mike4_inspect_boltpull.wav"}              
 })
 sound.Add({
     name =           "p01_ar_mike4_inspect_boltclose",
-    channel =        CHAN_WPNFOLEY +5,
+    channel =        CHAN_AUTO,
     volume =         1,
     sound = {"zeron/mwii/mike4/p01_ar_mike4_inspect_boltclose.wav"}              
 })

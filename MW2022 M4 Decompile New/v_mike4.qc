@@ -2071,7 +2071,9 @@ $sequence "inspect_empty" {
 	{ event 5004 34 "p01_ar_mike4_inspect_magout" }
 	{ event 5004 60 "p01_ar_mike4_inspect_lift" }
 	{ event 5004 71 "p01_ar_mike4_inspect_boltpull" }
+	{ event 5004 73 "p01_ar_mike4_inspect_boltclose" }
     { event 5004 80 "p01_ar_mike4_inspect_boltpull" }
+	{ event 5004 82 "p01_ar_mike4_inspect_boltclose" }
 	{ event 5004 89 "p01_ar_mike4_inspect_boltpull" }
 	{ event 5004 91 "p01_ar_mike4_inspect_boltclose" }
 	{ event 5004 119 "p01_ar_mike4_inspect_maghit" }
