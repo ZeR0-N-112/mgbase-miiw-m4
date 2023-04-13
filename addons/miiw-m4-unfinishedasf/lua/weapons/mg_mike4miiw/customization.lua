@@ -123,11 +123,16 @@ SWEP.Customization = {
 	"wp_ngal",   "wp_peq",   "wp_wrxe",
 	"wp_dbala3", "wp_ls321", "wp_mawl"},
     
-	{"attachment_vm_ar_mwiimike4_mags", "attachment_vm_ar_mike4_mag", "attachment_vm_ar_mike4_mag_v15", "attachment_vm_ar_mike4_mag_v27", "attachment_vm_ar_mike4_xmags_edited", "attachment_vm_ar_mike4_xmags2_edited", "attachment_vm_ar_mike4_mag_v5"},
+	{"attachment_vm_ar_mwiimike4_mags", "attachment_vm_ar_mike4_fastmag", "attachment_vm_ar_mike4_lightmag","attachment_vm_ar_mcharlie_magsub", "attachment_vm_ar_mike4_mag_v15", "attachment_vm_ar_mike4_mag_v27", "attachment_vm_ar_mike4_xmags_edited", "attachment_vm_ar_mike4_xmags2_edited", "attachment_vm_ar_mike4_mag_v5"},
     
     {"att_grip", "attachment_vm_ar_mike4_angledgrip01", "attachment_vm_ar_mike4_angledgrip02", "attachment_vm_ar_mike4_stubbygrip01", 
     "attachment_vm_ar_mike4_stubbygrip02", "attachment_vm_ar_mike4_vertgrip01", "attachment_vm_ar_mike4_vertgrip02", 
-    "attachment_vm_ar_mike4_vertgrip03"},
+    "attachment_vm_ar_mike4_vertgrip03", "wp_grip_ldag_m4",
+    "wp_grip_mod3_m4",
+    "wp_grip_shift_m4",
+    "wp_grip_td_m4",
+    "wp_grip_uvg_m4",
+    "wp_grip_wbj_m4"},
 }
 
 --NECESSARY: it loads custom attachments from other authors

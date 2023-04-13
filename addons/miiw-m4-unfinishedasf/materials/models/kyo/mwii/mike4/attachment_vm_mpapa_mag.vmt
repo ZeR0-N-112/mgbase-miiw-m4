@@ -1,0 +1,28 @@
+//if you don't know what a parameter does, visit:
+//https://developer.valvesoftware.com/wiki/$phong
+"VertexLitGeneric"
+{
+    "$basetexture" "models\kyo/mwii/mike4/att_ammo_556n_col"
+    "$bumpmap" "models\kyo/mwii/mike4/att_ammo_556n_nrm"
+    "$phongexponenttexture" "models\kyo/mwii/mike4/att_ammo_556n_exp"
+
+    "$color2" "[.4 .4 .4]"
+    "$blendtintbybasealpha" "1"
+
+    "$phong" "1"
+    "$phongboost" "8"
+	"$phongexponent" "14"
+    "$phongfresnelranges" "[1 0.5 0]"
+    "$phongalbedotint" "1"
+
+    //rimlight doesn't properly show in hlmv, make sure you're changing these values in game
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "5"
+
+    "$normalmapalphaenvmapmask" "1"
+    "$envmapfresnel" ".3"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[.035 .035 .035]"
+}
