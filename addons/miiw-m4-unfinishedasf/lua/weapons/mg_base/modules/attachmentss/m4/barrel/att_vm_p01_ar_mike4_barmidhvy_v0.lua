@@ -12,3 +12,8 @@ function ATTACHMENT:Stats(weapon)
     weapon.Bullet.EffectiveRange = weapon.Bullet.EffectiveRange * 1.02
     weapon.Bullet.DropOffStartRange = weapon.Bullet.DropOffStartRange * 1.02
 end
+
+function ATTACHMENT:PostProcess(weapon)
+    BaseClass.PostProcess(self, weapon)
+    weapon:SetGripPoseParameter("grip_barshort_offset")
+end
