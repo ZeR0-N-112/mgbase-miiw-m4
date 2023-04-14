@@ -8,8 +8,8 @@ include("animations.lua")
 include("customization.lua")
 
 if CLIENT then
-    killicon.Add( "mg_mike4mwii", "VGUI/entities/mg_mike4mwii", Color(255, 0, 0, 255))
-    SWEP.WepSelectIcon = surface.GetTextureID("VGUI/entities/mg_mike4mwii")
+    killicon.Add( "mg_mwiimike4", "VGUI/entities/mg_mwiimike4", Color(255, 0, 0, 255))
+    SWEP.WepSelectIcon = surface.GetTextureID("VGUI/entities/mg_mwiimike4")
 end
 
 SWEP.Base = "mg_base"
@@ -104,15 +104,15 @@ SWEP.Cone = {
 SWEP.Recoil = {
     Vertical = {1, 1.5}, --random value between the 2
     Horizontal = {-1.75, 1.75}, --random value between the 2
-    Shake = 1.1, --camera shake
-    AdsMultiplier = 0.15, --multiply the values by this amount while aiming
-    Seed = 2548715, --give this a random number until you like the current recoil pattern
-    ViewModelMultiplier = 1
+    Shake = 1.7, --camera shake
+    AdsMultiplier = 0.2, --multiply the values by this amount while aiming
+    Seed = 6969420, --give this a random number until you like the current recoil pattern
+    ViewModelMultiplier = 2
 }
 SWEP.Bullet = {
-    Damage = {26, 13}, --first value is damage at 0 meters from impact, second value is damage at furthest point in effective range
-    DropOffStartRange = 20, --in meters, damage will start dropping off after this range
-    EffectiveRange = 43, --in meters, damage scales within this distance
+    Damage = {24, 17}, --first value is damage at 0 meters from impact, second value is damage at furthest point in effective range
+    DropOffStartRange = 24, --in meters, damage will start dropping off after this range
+    EffectiveRange = 50, --in meters, damage scales within this distance
     Range = 180, --in meters, after this distance the bullet stops existing
     Tracer = false, --show tracer
     NumBullets = 1, --the amount of bullets to fire
@@ -164,9 +164,9 @@ SWEP.ViewModelOffsets = {
         }
     },
     
-    RecoilMultiplier = 0.4,
-    KickMultiplier = 1,
-    AimKickMultiplier = 1
+    RecoilMultiplier = 0.7,
+    KickMultiplier = 42,
+    AimKickMultiplier = 25
 }
 
 SWEP.Shell = "mwb_shelleject_556"

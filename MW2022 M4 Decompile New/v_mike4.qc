@@ -1,10 +1,10 @@
 // Created by Crowbar 0.71
 
-$modelname "vm_ar_mike4.mdl"
+$modelname "vm_ar_msecho.mdl"
 
 $bodygroup "receiver"
 
-	studio "att_vm_p01_ar_mike4_rec_v0.smd"
+	studio "att_vm_p01_dm_msecho_rec_riggedtom4.smd"
 	blank
 	blank
 	blank

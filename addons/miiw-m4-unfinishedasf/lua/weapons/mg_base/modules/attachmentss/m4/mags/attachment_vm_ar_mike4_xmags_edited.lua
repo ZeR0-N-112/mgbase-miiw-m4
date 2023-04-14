@@ -2,6 +2,7 @@ ATTACHMENT.Base = "att_magazine"
 ATTACHMENT.Name = "50 Round Mags"
 ATTACHMENT.Model = Model("models/kyoh/eidn/att_vm_p01_ar_mike4_xmag_v0_lod0.mdl")
 ATTACHMENT.Icon = Material("models/kyo/icons/icon_mike4mwii_xmag.vmt")
+ATTACHMENT.ExcludedByAttachments = {"miiwftac"}
 
 --Current mag
 ATTACHMENT.BulletList = {
@@ -24,6 +25,4 @@ function ATTACHMENT:Stats(weapon)
     weapon.Animations.Reload_Empty_Fast = weapon.Animations.Reload_Empty_Xmag_Fast
     weapon.Animations.Ads_In.Fps = weapon.Animations.Ads_In.Fps * 0.95
     weapon.Animations.Ads_Out.Fps = weapon.Animations.Ads_Out.Fps * 0.95
-    weapon.Animations.Reload.Fps = weapon.Animations.Reload.Fps * 0.9
-    weapon.Animations.Reload_Empty.Fps = weapon.Animations.Reload_Empty.Fps * 0.9
 end

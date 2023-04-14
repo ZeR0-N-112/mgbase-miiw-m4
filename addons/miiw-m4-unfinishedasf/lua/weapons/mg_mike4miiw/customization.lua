@@ -84,9 +84,9 @@ end
 SWEP.Customization = {
     {"att_perk", "attachment_vm_ar_mike4_perk_soh", "att_perk_fmj", "att_perk_ricochet", "att_perk_headshot"}, 
 	
-	{"att_receiver", "miiwm16"},
+	{"att_conversion", "miiwm16", "miiwftac"},
 
-    {"attachment_vm_ar_mike4_barrel_miiwm4", "att_vm_p01_ar_mike4_barhvyshort_v0", "att_vm_p01_ar_mike4_barshort_v0", "att_vm_p01_ar_mike4_barmidhvy_v0", "attachment_vm_ar_mike4_barlong_miiwm4", "attachment_vm_ar_mike4_barlight_miiwm4", "att_vm_p01_ar_mike16_barrel_v0", "att_vm_p01_ar_mike4_barhvy_v0"},
+    {"attachment_vm_ar_mike4_barrel_miiwm4", "att_vm_p01_dm_msecho_barbull", "att_vm_p01_dm_msecho_barrel", "att_vm_p01_ar_mike4_barhvyshort_v0", "att_vm_p01_ar_mike4_barshort_v0", "att_vm_p01_ar_mike4_barmidhvy_v0", "attachment_vm_ar_mike4_barlong_miiwm4", "attachment_vm_ar_mike4_barlight_miiwm4", "att_vm_p01_ar_mike16_barrel_v0", "att_vm_p01_ar_mike4_barhvy_v0"},
 
     {"attachment_vm_ar_mike4_stock_miiwm4", "att_vm_p01_ar_mike4_stockl_v0", "att_vm_p01_ar_mike4_stockno_v0", "att_vm_p01_ar_mike4_stocktac_v0", "att_wm_p01_sm_alpha57_stock_v0", "att_vm_p01_dm_msecho_stock_v0", "att_vm_p01_ar_mike16_stock_v0", "att_wm_p01_ar_mike4_stock_mw2r", "attachment_vm_ar_mike4_stock", "attachment_vm_ar_mike4_stock_v2", "attachment_vm_ar_mike4_stock_v27", "attachment_vm_ar_mike4_stock_v15","attachment_vm_ar_mike4_customstock", "attachment_vm_ar_mike4_stockno", "att_vm_stock_heavy01", 
     "att_vm_stock_heavy02", "att_vm_stock_light01", "att_vm_stock_medium01", "wp_330_ts", "wp_ak12", "wp_bcm_stock", "wp_ds150", "wp_emod", "wp_gl_core", "wp_m4ss", "wp_prs", "wp_sba3", "wp_ubr"},
@@ -125,7 +125,7 @@ SWEP.Customization = {
 	"wp_ngal",   "wp_peq",   "wp_wrxe",
 	"wp_dbala3", "wp_ls321", "wp_mawl"},
     
-	{"attachment_vm_ar_mwiimike4_mags", "attachment_vm_ar_mike4_fastmag", "attachment_vm_ar_mike4_lightmag","attachment_vm_ar_mcharlie_magsub", "attachment_vm_ar_mike4_mag_v15", "attachment_vm_ar_mike4_mag_v27", "attachment_vm_ar_mike4_xmags_edited", "attachment_vm_ar_mike4_xmags2_edited", "attachment_vm_ar_mike4_mag_v5"},
+	{"attachment_vm_ar_mwiimike4_mags", "attachment_vm_ar_mike4_fastmag", "attachment_vm_ar_mike4_lightmag","attachment_vm_ar_mcharlie_magsub", "attachment_vm_ar_mike4_mag_v15", "attachment_vm_ar_mike4_xmags_edited", "attachment_vm_ar_mike4_xmags2_edited"},
     
     {"att_grip", "attachment_vm_ar_mike4_angledgrip01", "attachment_vm_ar_mike4_angledgrip02", "attachment_vm_ar_mike4_stubbygrip01", 
     "attachment_vm_ar_mike4_stubbygrip02", "attachment_vm_ar_mike4_vertgrip01", "attachment_vm_ar_mike4_vertgrip02", 

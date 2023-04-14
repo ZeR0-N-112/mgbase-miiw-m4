@@ -1,5 +1,6 @@
 ATTACHMENT.Base = "attachment_vm_ar_mike4_mag"
 ATTACHMENT.Name = "Fast Mags"
+ATTACHMENT.ExcludedByAttachments = {"miiwftac"}
 
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 function ATTACHMENT:Stats(weapon)

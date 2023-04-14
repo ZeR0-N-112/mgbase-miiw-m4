@@ -2,6 +2,7 @@ ATTACHMENT.Base = "att_magazine"
 ATTACHMENT.Name = "Default Mag"
 ATTACHMENT.Model = Model("models/kyoh/eidn/att_vm_p01_ar_mike4_mag_v0.mdl")
 ATTACHMENT.Icon = Material("viper/mw/attachments/icons/mike4/icon_attachment_ar_mike4_xmags.vmt")
+ATTACHMENT.ExcludedByAttachments = {"miiwftac"}
 
 --Current mag
 ATTACHMENT.BulletList = {
