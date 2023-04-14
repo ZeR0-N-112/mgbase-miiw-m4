@@ -19,7 +19,11 @@ $bodygroup "tag_sight"
 	studio "mike4_sights_rear_off.smd"    
 	blank
 }
-
+$bodygroup "stock_hide"
+{
+	studio "tag_stockhide.smd"  
+	blank
+}
 $surfaceprop "weapon"
 
 $contents "solid"
@@ -36,7 +40,7 @@ $attachment "camera" "tag_playerhelmet" 0 0 0 rotate 0 0 0
 $attachment "reflex" "tag_reflex" 0 0 0 rotate 0 0 0
 $attachment "holo" "tag_holo" 0 0 0 rotate 0 0 0
 $attachment "scope" "tag_scope" 0 0 0 rotate 0 0 0
-$attachment "acog" "tag_acog_ads" 0 0 0 rotate 0 0 0
+$attachment "acog" "tag_acog_2" 0 0 0 rotate 0 0 0
 $attachment "hybrid" "tag_hybrid" 0 0 0 rotate 0 0 0
 $attachment "thermal" "tag_thermal" 0 0 0 rotate 0 0 0
 $attachment "align" "tag_align_gun" 0 0 0 rotate 0 0 0
@@ -166,11 +170,12 @@ $definebone "j_gun" "" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "j_ejectioncover" "tag_sling" 5.69 -0.785 -0.379 0 0 118.217638 0 0 0 0 0 0
 $definebone "j_trigger" "tag_sling" 3.096 0 -1.996 0 0 0 0 0 0 0 0 0
 $definebone "tag_acog_ads" "tag_sling" 3.041 0 1.202 0 0 0 -1 0 0 0 0 0
+$definebone "tag_acog_2" "tag_sling" 3.041 0 1.202 0 0 0 -1 0 0 0 0 0
 $definebone "tag_align_gun" "tag_sling" 2.026 0 2.576 0 0 0 0 0 0 0 0 0
 $definebone "tag_barrel_attach" "tag_sling" 7.854 0 -0.042 0 0 0 0 0 0 0 0 0
 $definebone "tag_brass" "tag_sling" 5.69 -0.365 0.068 -19.997889 -89.999982 0 0 0 0 0 0 0
 $definebone "tag_holo" "tag_sling" 3.041 0 1.202 0 0 0 -1 0 0 0 0 0
-$definebone "tag_hybrid" "tag_sling" 3.72 0 1.202 0 0 0 -1 0 0 0 0 0
+$definebone "tag_hybrid" "tag_sling" 3.72 0 1.202 0 0 0 0 0 0 0 0 0
 $definebone "tag_ik_loc_ri" "tag_sling" -1.524 -1.859 -4.367 -0.854452 11.922965 -99.139117 0 0 0 0 0 0
 $definebone "tag_mag_attach" "tag_sling" 7.284 0 -2.195 0 0 0 0 0 0 0 0 0
 $definebone "tag_mag_show2" "tag_sling" 4.587 -0.785 0.022 0 0 0 0 0 0 0 0 0
@@ -180,7 +185,7 @@ $definebone "tag_sight_off" "tag_sling" 5.136 0 1.534 0 0 0 0 0 0 0 0 0
 $definebone "tag_sight_on" "tag_sling" 4.657 0 1.545 0 0 0 0 0 0 0 0 0
 $definebone "tag_stock_attach" "tag_sling" -0.403 0 -0.011 0 0 0 0 0 0 0 0 0
 $definebone "tag_stock_hide" "tag_sling" -0.598 0 -0.011 0 0 0 0 0 0 0 0 0
-$definebone "tag_thermal" "tag_sling" 3.041 0 1.202 0 0 0 -1 0 0 0 0 0
+$definebone "tag_thermal" "tag_sling" 3.041 0.69 1.9 0 0 0 0 0 0 0 0 0
 $definebone "j_charginghandle" "tag_sling" 1.781 0 0.873 0 0 0 0 0 0 0 0 0
 $definebone "j_charginghandleassist" "tag_sling" 0.384 0.715 0.801 0 0 0 0 0 0 0 0 0
 $definebone "j_firesel" "tag_sling" 1.795 0.533 -1.55 0 0 0 0 0 0 0 0 0
@@ -194,8 +199,8 @@ $definebone "tag_ik_loc_le" "tag_barrel_attach" 1.868 1.809 -1.975 -0.983711 -26
 $definebone "tag_grip_hide" "tag_barrel_attach" 6.072001 0 -1.238 0 0 0 0 0 0 0 0 0
 $definebone "j_hybrid_scope" "tag_hybrid" 1.086 -0.661 -0.149 0 0 0 0 0 0 0 0 0
 $definebone "j_magnifier_lever" "tag_hybrid" 1.067 0.589 0.076 0 0 0 0 0 0 0 0 0
-$definebone "j_mag1" "tag_mag_attach" -1.323 0 0.184 0 0 0 0 0 0 0 0 0
-$definebone "j_mag2" "tag_mag_attach" -1.323 0 0.184 0 0 0 0 0 0 0 0 0
+$definebone "j_mag1" "tag_mag_attach" -1.323 0 0.184 0 0 0 -0.1 0 0 0 0 0
+$definebone "j_mag2" "tag_mag_attach" -1.323 0 0.184 0 0 0 -0.1 0 0 0 0 0
 $definebone "j_b_014" "j_mag1" 0.146 0.184 1.067 0 0 0 0 0 0 0 0 0
 $definebone "j_b_015" "j_mag1" 0.148 0.184 1.414 0 0 0 0 0 0 0 0 0
 $definebone "j_b_016" "j_mag1" 0.148 -0.074 1.64 0 0 0 0 0 0 0 0 0
@@ -219,70 +224,65 @@ $definebone "tag_camera" "tag_cambone" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "tag_weapon" "tag_torso" 19.220901 -3.1474 8.567799 0 0 -2.500674 0 0 0 0 0 0
 $definebone "tag_player" "tag_camera" 0.106 0 -64.32 0 0 0 0 0 0 0 0 0
 $definebone "tag_playerhelmet" "tag_camera" 0 0 0 0 0 0 0 0 0 0 0 0
-$definebone "j_hip_le" "j_mainroot" 0 0 -4.867001 -0.000019 -179.255091 180.000005 0 0 0 0 0 0
+$definebone "j_hip_le" "j_mainroot" 0 0 -4.867 -0.000019 -179.255091 180.000005 0 0 0 0 0 0
 $definebone "j_hip_ri" "j_mainroot" 0 0 4.867 -0.000019 -179.255091 180.000005 0 0 0 0 0 0
 $definebone "j_groinprotector" "j_mainroot" 4 -6.5 0 0 0.055978 0 0 0 0 0 0 0
 $definebone "j_crotch" "j_mainroot" -6.5 0 0 89.999982 0 0 0 0 0 0 0 0
-$definebone "j_hiptwist_le" "j_hip_le" 1.000088 -0.000029 0 0 0 0 0 0 0 0 0 0
-$definebone "j_knee_le" "j_hip_le" 17.162518 -0.000404 0 0 6.830459 0 0 0 0 0 0 0
-$definebone "j_hip_proc_le" "j_hip_le" 9.999889 -0.000302 0 0 0 0 0 0 0 0 0 0
-$definebone "j_hiptwist_ri" "j_hip_ri" 1.000088 -0.000029 0 0 0 0 0 0 0 0 0 0
-$definebone "j_knee_ri" "j_hip_ri" 17.162518 -0.000404 0 0 6.830459 0 0 0 0 0 0 0
-$definebone "j_hip_proc_ri" "j_hip_ri" 9.499836 0.000212 0 0 0 0 0 0 0 0 0 0
+$definebone "j_hiptwist_le" "j_hip_le" 1.000088 -0.00003 0 0 0 0 0 0 0 0 0 0
+$definebone "j_knee_le" "j_hip_le" 17.162516 -0.000404 0 0 6.830459 0 0 0 0 0 0 0
+$definebone "j_hip_proc_le" "j_hip_le" 9.999887 -0.000304 0 0 0 0 0 0 0 0 0 0
+$definebone "j_hiptwist_ri" "j_hip_ri" 1.000092 -0.00003 0 0 0 0 0 0 0 0 0 0
+$definebone "j_knee_ri" "j_hip_ri" 17.162521 -0.000404 0 0 6.830459 0 0 0 0 0 0 0
+$definebone "j_hip_proc_ri" "j_hip_ri" 9.499838 0.000211 0 0 0 0 0 0 0 0 0 0
 $definebone "j_proc_spinelower" "j_spinelower" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "j_ankle_le" "j_knee_le" 17.749376 0.295515 0 0 -66.403393 0 0 0 0 0 0 0
 $definebone "j_kneedq_le" "j_knee_le" 0.017889 0.299792 0 0 -3.413797 0 0 0 0 0 0 0
-$definebone "tag_stowed_thigh" "j_hiptwist_ri" 12.283575 1.581456 -4.696 -4.969035 5.16722 83.781839 0 0 0 0 0 0
+$definebone "tag_stowed_thigh" "j_hiptwist_ri" 12.283573 1.581456 -4.696 -4.969035 5.16722 83.781839 0 0 0 0 0 0
 $definebone "j_ankle_ri" "j_knee_ri" 17.749376 0.295515 0 0 -66.403393 0 0 0 0 0 0 0
-$definebone "j_kneedq_ri" "j_knee_ri" 0.017889 0.299792 0 0 -3.413797 0 0 0 0 0 0 0
+$definebone "j_kneedq_ri" "j_knee_ri" 0.017891 0.299792 0 0 -3.413797 0 0 0 0 0 0 0
 $definebone "j_neck" "j_spineupper" 13.354 0 0 0 -16.850746 0 0 0 0 0 0 0
 $definebone "j_spine4" "j_spineupper" 4.530998 0 0 0 0 0 0 0 0 0 0 0
 $definebone "j_proc_spineupper" "j_spineupper" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "j_ball_le" "j_ankle_le" 5.413524 0.000347 0 0 -29.682366 0 0 0 0 0 0 0
-$definebone "j_ball_ri" "j_ankle_ri" 5.413524 0.000347 0 0 -29.682366 0 0 0 0 0 0 0
-$definebone "tag_carry_attach" "j_clavicle_le" 4.662 -5.366332 4.825191 89.456128 -178.832726 89.938135 0 0 0 0 0 0
-$definebone "j_head" "j_neck" 3.116966 -0.000444 0 0 16.850746 0 0 0 0 0 0 0
-$definebone "j_chest" "j_spine4" 4.531197 0 0 0 0 0 0 0 0 0 0 0
+$definebone "j_ball_ri" "j_ankle_ri" 5.413525 0.000347 0 0 -29.682366 0 0 0 0 0 0 0
+$definebone "tag_carry_attach" "j_clavicle_le" 4.662 -5.366333 4.825191 89.45619 -178.832234 89.93793 0 0 0 0 0 0
+$definebone "j_head" "j_neck" 3.11697 -0.000444 0 0 16.850746 0 0 0 0 0 0 0
+$definebone "j_chest" "j_spine4" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "j_eyeball_le" "j_head" 3.512001 -3.547 -1.066 89.999982 0 0 0 0 0 0 0 0
 $definebone "j_eyeball_ri" "j_head" 3.456001 -3.517 1.169 89.999982 0 0 0 0 0 0 0 0
 $definebone "j_head_end" "j_head" 6.233002 0 0 0 0 0 0 0 0 0 0 0
-$definebone "j_jaw" "j_head" -0.171997 -0.106 -0.902 58.967386 -179.596491 89.995228 0 0 0 0 0 0
+$definebone "j_jaw" "j_head" -0.171997 -0.106 -0.902 58.967441 -179.596491 89.995228 0 0 0 0 0 0
 $definebone "j_nvg" "j_head" 6.241997 -6.38 0 0 0 0 0 0 0 0 0 0
-$definebone "j_shield_le" "j_elbow_le" 3.999432 -0.000528 -0.000328 -0.003324 0.001026 -34.519687 0 0 0 0 0 0
-$definebone "j_shield_ri" "j_elbow_ri" 3.999897 0.000041 0.001011 -0.000009 0.000004 8.947887 0 0 0 0 0 0
+$definebone "j_shield_le" "j_elbow_le" 3.999435 -0.000527 -0.000332 -0.003154 0.001486 -49.665297 0 0 0 0 0 0
+$definebone "j_shield_ri" "j_elbow_ri" 3.999897 0.000039 0.001007 0.000009 0.000003 18.333056 0 0 0 0 0 0
 $definebone "j_helmet" "j_head_end" 1.598 0 0 0 0 0 0 0 0 0 0 0
-$definebone "j_proc_wristfronttwist1_le" "j_wristfronttwist1_le" -1.145525 0.00013 0.000671 0.000002 -0.000003 -0.000001 0 0 0 0 0 0
-$definebone "j_webbing_le_1" "j_wrist_le" 2.299679 -2.499979 -0.59948 12.691708 -30.211481 51.103762 0 0 0 0 0 0
-$definebone "tag_weapon_left" "j_wrist_le" 1.442673 -0.486605 -2.015228 -21.553406 -16.149957 130.432994 0 0 0 0 0 0
-$definebone "tag_accessory_left" "j_wrist_le" -9.580671 -27.862101 -37.184677 -7.073671 -32.571325 46.574544 0 0 0 0 0 0
-$definebone "j_proc_metaindex_le_1" "j_wrist_le" 0.649933 -0.548296 0.093651 -7.528598 -6.420682 -95.449776 0 0 0 0 0 0
-$definebone "j_proc_metaknuckle_le_1" "j_wrist_le" 0.657074 0.0084 0.040371 -7.529055 -0.000749 -95.451614 0 0 0 0 0 0
-$definebone "j_proc_metapinky_le_1" "j_wrist_le" 0.665774 0.747221 -0.02919 -7.529116 5.441718 -95.45104 0 0 0 0 0 0
-$definebone "j_webbing_ri_1" "j_wrist_ri" 2.300139 -2.499415 0.600155 -12.691704 -30.208267 -51.109028 0 0 0 0 0 0
-$definebone "tag_weapon_right" "j_wrist_ri" 12.104931 -3.647287 -1.238487 11.636076 2.76607 99.33181 0 0 0 0 0 0
-$definebone "tag_knife_attach2" "j_wrist_ri" 2.762355 0.116951 1.523975 3.675695 99.91239 93.362375 0 0 0 0 0 0
-$definebone "tag_accessory_right" "j_wrist_ri" 7.228321 7.928202 -3.925648 7.073679 -32.571318 133.425478 0 0 0 0 0 0
-$definebone "j_proc_metaindex_ri_1" "j_wrist_ri" 0.650392 -0.547731 -0.092979 7.5286 -6.420673 95.449783 0 0 0 0 0 0
-$definebone "j_proc_metaknuckle_ri_1" "j_wrist_ri" 0.657068 0.008397 -0.040379 7.529057 -0.000742 95.45162 0 0 0 0 0 0
-$definebone "j_proc_metapinky_ri_1" "j_wrist_ri" 0.665774 0.747219 0.029182 7.529114 5.441724 95.451047 0 0 0 0 0 0
+$definebone "j_proc_wristfronttwist1_le" "j_wristfronttwist1_le" -1.145531 0.00013 0.000675 -0.000002 0.000003 -0.000001 0 0 0 0 0 0
+$definebone "j_webbing_le_1" "j_wrist_le" 2.299676 -2.499979 -0.59948 12.691009 -30.207587 51.107655 0 0 0 0 0 0
+$definebone "tag_weapon_left" "j_wrist_le" 2.179619 0.848711 -0.758739 -25.275971 -28.653378 145.624769 0 0 0 0 0 0
+$definebone "tag_accessory_left" "j_wrist_le" -9.580695 -27.862103 -37.184669 -7.073679 -32.571328 46.574537 0 0 0 0 0 0
+$definebone "j_proc_metaindex_le_1" "j_wrist_le" 0.649932 -0.548295 0.093651 -7.528615 -6.420676 -95.449783 0 0 0 0 0 0
+$definebone "j_proc_metapinky_le_1" "j_wrist_le" 0.665773 0.747221 -0.02919 -7.529121 5.441729 -95.451047 0 0 0 0 0 0
+$definebone "j_webbing_ri_1" "j_wrist_ri" 2.300137 -2.499413 0.600159 -12.693762 -30.210688 -51.111436 0 0 0 0 0 0
+$definebone "tag_weapon_right" "j_wrist_ri" 13.171429 -2.504943 -0.868362 4.915919 2.901456 111.287728 0 0 0 0 0 0
+$definebone "tag_knife_attach2" "j_wrist_ri" 2.762351 0.116951 1.523975 3.675686 99.912383 93.362443 0 0 0 0 0 0
+$definebone "tag_accessory_right" "j_wrist_ri" 7.228319 7.928204 -3.925644 7.073686 -32.571342 133.425423 0 0 0 0 0 0
+$definebone "j_proc_metaindex_ri_1" "j_wrist_ri" 0.650393 -0.54773 -0.092972 7.528616 -6.420683 95.44979 0 0 0 0 0 0
+$definebone "j_proc_metapinky_ri_1" "j_wrist_ri" 0.665776 0.747221 0.02919 7.529124 5.441721 95.451067 0 0 0 0 0 0
 $definebone "j_visor" "j_helmet" -4.481003 -0.202 0 0 0 0 0 0 0 0 0 0
 $definebone "j_visor_inner" "j_helmet" -5.516998 -0.291 -0.001 0 0 0 0 0 0 0 0 0
-$definebone "tag_wrist_attach_le" "j_proc_wristfronttwist1_le" -0.857697 0.10407 0.104687 9.392155 0.781051 1.34851 0 0 0 0 0 0
-$definebone "j_proc_metaindex_le_ads" "j_proc_metaindex_le_1" 1.899119 0.000423 -0.000439 -1.908571 27.378689 1.569095 0 0 0 0 0 0
-$definebone "j_proc_knuckle_le_1" "j_proc_metaknuckle_le_1" 1.799658 -0.00024 0.000231 -1.908568 27.378689 1.569096 0 0 0 0 0 0
-$definebone "j_proc_idle_knuckle_le_1" "j_proc_metaknuckle_le_1" 1.799658 -0.00024 0.000231 -1.908568 27.378689 1.569096 0 0 0 0 0 0
-$definebone "j_proc_orient_knuckle_le_1" "j_proc_metaknuckle_le_1" 1.799658 -0.00024 0.000231 -1.908568 27.378689 1.569096 0 0 0 0 0 0
-$definebone "j_proc_metapinky_le_ads" "j_proc_metapinky_le_1" 1.90031 -0.000141 -0.000518 -1.908568 27.378678 1.569097 0 0 0 0 0 0
-$definebone "j_proc_metaindex_ri_ads" "j_proc_metaindex_ri_1" 1.899433 -0.00032 -0.000151 1.908592 27.378682 -1.569105 0 0 0 0 0 0
-$definebone "j_proc_knuckle_ri_1" "j_proc_metaknuckle_ri_1" 1.799661 -0.000237 -0.000233 1.908587 27.378678 -1.569105 0 0 0 0 0 0
-$definebone "j_proc_idle_knuckle_ri_1" "j_proc_metaknuckle_ri_1" 1.799661 -0.000237 -0.000233 1.908587 27.378678 -1.569105 0 0 0 0 0 0
-$definebone "j_proc_orient_knuckle_ri_1" "j_proc_metaknuckle_ri_1" 1.799661 -0.000237 -0.000233 1.908587 27.378678 -1.569105 0 0 0 0 0 0
-$definebone "j_proc_metapinky_ri_ads" "j_proc_metapinky_ri_1" 1.900728 0.000553 -0.000072 1.908582 27.378673 -1.569106 0 0 0 0 0 0
-$definebone "j_thumb_le_4" "j_thumb_le_3" 0.59989 0.400186 -0.000029 0 -0.000001 -0.000007 0 0 0 0 0 0
-$definebone "j_thumb_ri_4" "j_thumb_ri_3" 0.59989 0.400185 0.000034 0.000002 -180.000005 -0.000002 0 0 0 0 0 0
-$definebone "j_index_le_4" "j_index_le_3" 0.599499 0.400698 0.000233 0.000006 -0.000001 0.000011 0 0 0 0 0 0
-$definebone "j_index_ri_4" "j_index_ri_3" 0.600407 0.399635 -0.000467 -0.000008 -179.999978 -0.000001 0 0 0 0 0 0
-$definebone "j_bullet2" "j_mag1" 0.28 -0.135 2.197 0 -89.996485 89.999982 0 0 0 0 0 0
+$definebone "tag_wrist_attach_le" "j_proc_wristfronttwist1_le" -0.857691 0.104071 0.104683 9.392154 0.781066 1.348511 0 0 0 0 0 0
+$definebone "j_proc_metaindex_le_2" "j_proc_metaindex_le_1" 1.899122 0.000423 -0.000439 -1.908588 27.378661 1.5691 0 0 0 0 0 0
+$definebone "j_proc_idle_knuckle_le_1" "j_proc_metaknuckle_le_1" 1.799658 -0.000237 0.000231 -1.908584 27.378656 1.569101 0 0 0 0 0 0
+$definebone "j_proc_orient_knuckle_le_1" "j_proc_metaknuckle_le_1" 1.799658 -0.000237 0.000231 -1.908584 27.378656 1.569101 0 0 0 0 0 0
+$definebone "j_proc_metapinky_le_2" "j_proc_metapinky_le_1" 1.900309 -0.000141 -0.000517 -1.908589 27.378661 1.569101 0 0 0 0 0 0
+$definebone "j_proc_metaindex_ri_2" "j_proc_metaindex_ri_1" 1.899439 -0.00032 -0.000151 1.908578 27.378677 -1.56912 0 0 0 0 0 0
+$definebone "j_proc_idle_knuckle_ri_1" "j_proc_metaknuckle_ri_1" 1.799664 -0.00024 -0.000233 1.908582 27.378672 -1.569113 0 0 0 0 0 0
+$definebone "j_proc_orient_knuckle_ri_1" "j_proc_metaknuckle_ri_1" 1.799664 -0.00024 -0.000233 1.908582 27.378672 -1.569113 0 0 0 0 0 0
+$definebone "j_proc_metapinky_ri_2" "j_proc_metapinky_ri_1" 1.900726 0.000549 -0.000072 1.908581 27.378677 -1.569123 0 0 0 0 0 0
+$definebone "j_thumb_le_4" "j_thumb_le_3" 0.599886 0.400185 -0.000027 0.000002 0.000003 -0.000005 0 0 0 0 0 0
+$definebone "j_thumb_ri_4" "j_thumb_ri_3" 0.599892 0.400187 0.000031 0.000002 -179.999978 -0.000006 0 0 0 0 0 0
+$definebone "j_index_le_4" "j_index_le_3" 0.599503 0.400694 0.000236 -0.000005 -0.000019 -0.000004 0 0 0 0 0 0
+$definebone "j_index_ri_4" "j_index_ri_3" 0.600407 0.399631 -0.000468 -0.000016 -180.000005 0.000001 0 0 0 0 0 0
 
 $bonemerge "tag_origin"
 $bonemerge "tag_view"
@@ -1248,14 +1248,13 @@ $sequence "draw" {
 }
 
 $sequence "semi_on" {
-	"anims\selectsemi_off.smd"
+	"anims\vm_p01_ar_mike4_selectsemi_off.smd"
 	{ event 9021 0 "0" }
 	{ event 5004 1 "p01_ar_ar_mike4_selector_on" }
 	{ event 5004 9 "Viewmodel.Small" }
 	{ event 9021 15 "1" }
 	fadein 0.2
 	fadeout 0.2
-	angles 90 180 180
 	addlayer "jog_loop"
 	addlayer "jog_offset"
 	addlayer "walk_loop"
@@ -1283,14 +1282,13 @@ $sequence "semi_on" {
 }
 
 $sequence "semi_off" {
-	"anims\selectsemi_on.smd"
+	"anims\vm_p01_ar_mike4_selectsemi_off.smd"
 	{ event 9021 0 "0" }
 	{ event 5004 4 "p01_ar_ar_mike4_selector_off" }
 	{ event 5004 10 "Viewmodel.Small" }
 	{ event 9021 14 "1" }
 	fadein 0.2
 	fadeout 0.2
-	angles 90 180 180
 	addlayer "jog_loop"
 	addlayer "jog_offset"
 	addlayer "walk_loop"
@@ -1313,12 +1311,13 @@ $sequence "semi_off" {
 	addlayer "hybrid_offset"
 	snap
 	fps 30
-	ikrule "rhand" touch "tag_ik_loc_ri" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 22 22 target 0  
-	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 22 22 target 1  
+	ikrule "rhand" touch "tag_ik_loc_ri" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 18 18 target 0  
+	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 18 18 target 1  
 }
 
 $sequence "draw_first" {
 	"anims\draw_first.smd"
+	{ event 9011 0 "0" }
 	{ event 5004 1 "p01_ar_mike4_inspect_lift" }
 	{ event 5004 12 "Viewmodel.Small" }
 	{ event 5004 21 "Viewmodel.Small" }
@@ -2458,8 +2457,8 @@ $sequence "hybrid_toggle_on" {
 	addlayer "grip_gripvertpro_offset"
 	snap
 	fps 30
-	ikrule "rhand" touch "tag_ik_loc_ri" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 31 31 target 0  
-	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 31 31 target 1  
+	ikrule "rhand" touch "tag_ik_loc_ri" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 33 33 target 0  
+	ikrule "lhand" touch "tag_ik_loc_le" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 33 33 target 1  
 }
 
 $sequence "hybrid_toggle_off" {
@@ -2833,8 +2832,8 @@ $sequence "empty_offset" {
 }
 
 $sequence "grip_gripvert_offset" {
-	"a_grip_gripvert_idle_to_sub"
-	"a_delta_grip_gripvert_additive_for_offset"
+	"a_grip_gripvertpro_idle_to_sub"
+	"a_delta_grip_gripvertpro_additive_for_offset"
 	blend "grip_gripvert_offset" 0 1
 	blendwidth 2
 	delta
