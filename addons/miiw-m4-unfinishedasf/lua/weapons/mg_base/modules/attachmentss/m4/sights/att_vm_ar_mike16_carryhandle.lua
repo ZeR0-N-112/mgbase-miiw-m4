@@ -1,7 +1,8 @@
 ATTACHMENT.Base = "att_sight"
 ATTACHMENT.Name = "M16 Carry Handle"
 ATTACHMENT.Model = Model("models/viper/mw/attachments/mike4/att_vm_ar_mike16_carryhandle.mdl")
-ATTACHMENT.Icon = Material("viper/mw/attachments/icons/mike4/icon_attachment_ar_mike4_carryhandle.vmt")
+ATTACHMENT.Icon = Material("models/kyo/icons/icon_mike4mwii_crryhndl.vmt")
+
 ATTACHMENT.Bodygroups ={
     ["tag_sight"] = 2,
 	["sight"] = 2

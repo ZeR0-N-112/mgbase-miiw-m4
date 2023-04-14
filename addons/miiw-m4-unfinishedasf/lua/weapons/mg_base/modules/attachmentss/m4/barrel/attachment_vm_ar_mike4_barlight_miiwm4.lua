@@ -1,6 +1,7 @@
 ATTACHMENT.Base = "att_barrel"
 ATTACHMENT.Name = "Tempus Trench Pro"
 ATTACHMENT.Model = Model("models/viper/mw/attachments/mike4/att_vm_p01_ar_mike4_barlight_v0_lod0.mdl")
+ATTACHMENT.Icon = Material("models/kyo/icons/icon_mike4mwii_barlight.vmt")
 
 
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)

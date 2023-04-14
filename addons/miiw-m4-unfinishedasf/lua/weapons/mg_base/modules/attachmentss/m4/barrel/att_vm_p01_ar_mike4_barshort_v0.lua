@@ -1,6 +1,7 @@
 ATTACHMENT.Base = "att_barrel"
 ATTACHMENT.Name = "7.5'' Tempus Firebrand Barrel"
 ATTACHMENT.Model = Model("models/viper/mw/attachments/mike4/att_vm_p01_ar_mike4_barshort.mdl")
+ATTACHMENT.Icon = Material("models/kyo/icons/icon_mike4mwii_barshrt.vmt")
 
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 function ATTACHMENT:Stats(weapon)

@@ -2,6 +2,8 @@ ATTACHMENT.Base = "att_receiver"
 ATTACHMENT.Name = "M16 Receiver"
 ATTACHMENT.CosmeticChange = true
 
+ATTACHMENT.Icon = Material("models/kyo/icons/icon_mike4mwii_mike16rec.vmt")
+
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)
 
 function ATTACHMENT:PostProcess(weapon)
