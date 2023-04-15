@@ -1,7 +1,8 @@
 ATTACHMENT.Base = "att_magazine"
 ATTACHMENT.Name = "15 Round Mag"
 ATTACHMENT.Model = Model("models/kyoh/eidn/att_vm_p01_ar_msecho_xmag.mdl")
-ATTACHMENT.Icon = Material("viper/mw/attachments/icons/mike4/icon_attachment_ar_mike4_xmags.vmt")
+ATTACHMENT.Icon = Material("models/kyo/icons/icon_mike4mwii_msechoxmag.vmt")
+
 
 --Current mag
 ATTACHMENT.BulletList = {

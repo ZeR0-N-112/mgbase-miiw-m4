@@ -1,6 +1,7 @@
 ATTACHMENT.Base = "att_barrel"
 ATTACHMENT.Name = "FTAC Recon Barrel"
 ATTACHMENT.Model = Model("models/viper/mw/attachments/mike4/att_vm_p01_dm_msecho_barrel.mdl")
+ATTACHMENT.Icon = Material("models/kyo/icons/icon_mike4mwii_msechobar.vmt")
 
 
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)

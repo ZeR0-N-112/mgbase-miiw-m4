@@ -2,6 +2,8 @@ ATTACHMENT.Base = "att_barrel"
 ATTACHMENT.Name = "Bull Rider 16.5''"
 ATTACHMENT.Model = Model("models/viper/mw/attachments/mike4/att_vm_p01_dm_msecho_barbull.mdl")
 ATTACHMENT.ExcludedCategories = {"Muzzle Devices"}
+ATTACHMENT.Icon = Material("models/kyo/icons/icon_mike4mwii_msechobarbull.vmt")
+
 
 
 local BaseClass = GetAttachmentBaseClass(ATTACHMENT.Base)

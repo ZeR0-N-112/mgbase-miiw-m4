@@ -21,5 +21,6 @@ end
 function ATTACHMENT:PostProcess(weapon)
     BaseClass.PostProcess(self, weapon)
     weapon:SetViewModel("models/kyoh/eidn/vm_ar_mike16.mdl")
+    weapon.WorldModel = Model("models/kyoh/eidn/wm_ar_mike16.mdl")
 end
 

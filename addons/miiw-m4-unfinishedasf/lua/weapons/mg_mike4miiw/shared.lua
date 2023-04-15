@@ -8,8 +8,8 @@ include("animations.lua")
 include("customization.lua")
 
 if CLIENT then
-    killicon.Add( "mg_mwiimike4", "VGUI/entities/mg_mwiimike4", Color(255, 0, 0, 255))
-    SWEP.WepSelectIcon = surface.GetTextureID("VGUI/entities/mg_mwiimike4")
+    killicon.Add( "mg_mike4miiw", "VGUI/entities/mg_mike4miiw", Color(255, 0, 0, 255))
+    SWEP.WepSelectIcon = surface.GetTextureID("VGUI/entities/mg_mike4miiw")
 end
 
 SWEP.Base = "mg_base"
@@ -20,7 +20,7 @@ SWEP.Category = "Modern Warfare"
 SWEP.SubCategory = "Assault Rifles"
 SWEP.Spawnable = true
 SWEP.VModel = Model("models/kyoh/eidn/vm_ar_mike4.mdl")
-SWEP.WorldModel = Model("models/viper/mw/weapons/w_mike4.mdl")
+SWEP.WorldModel = Model("models/kyoh/eidn/wm_ar_mike4.mdl")
 SWEP.Trigger = {
     PressedSound = Sound("mw19.mike4.fire.first"),
     ReleasedSound = Sound("mw19.mike4.fire.disconnector"),
@@ -135,8 +135,8 @@ SWEP.Zoom = {
 
 SWEP.WorldModelOffsets = {
     Bone = "tag_sling",
-    Angles = Angle(0, 95, -90),
-    Pos = Vector(3,-5,-3.5)
+    Angles = Angle(3, 99, -90),
+    Pos = Vector(2.5 ,-3,-2.5)
 }
 
 SWEP.ViewModelOffsets = {
